@@ -1,0 +1,27 @@
+#+TITLE: Diseño de filtros digitales TIIR basados en el microcontrolador STM32F429ZI
+#+AUTHOR: A. Riedinger.
+#+EMAIL: ariedinger4@duck.com
+
+* About:
+
+El proyecto se basa en el desarrollo de filtros del tipo TIIR (/Truncated Infinite Impulse Response/) según la placa de desarrollo STM32F429ZI-NUCLEO. Se implementa un filtro pasa-bajos, pasa-altos y elimina-banda; y se compara los mismos con filtros IIR y FIR de igual tipo.
+
+* Organización de los archivos:
+
+Los archivos del proyecto se organizan en en cuatro directorios distintos, que se desarrollarán a continuación.
+
+** bib/
+
+Contiene la bibliografía y los archivos .bib utilizados en LaTeX para realizar citaciones.
+
+** code/
+
+Contiene el código fuente a compilar en la placa STM32F429ZI-NUCLEO. Además, contiene las distintas librerías utilizadas y creadas; y los archivos de configuración. Para la compilación y debugeo del código se utilizó el software STMCubeIDE; y la edición del código se realizó en Doom Emacs.
+
+** doc/
+
+Aquí se guardan todos los archivos pertinentes al desarrollo del informe en LaTeX. El documento se editó como un .org en Doom Emacs.
+
+** images/
+
+Aquí se encuentran todas las imagenes utilizadas en el documento en LaTeX; como así también los resultados de la implementación física.
