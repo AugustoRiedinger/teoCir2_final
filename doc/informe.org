@@ -1,0 +1,11 @@
+#+LATEX_CLASS: IEEEtran
+#+LATEX_COMPILER: pdflatex
+#+LATEX_HEADER: \input{~/org/latex/ieee.tex}
+#+STARTUP: showeverything inlineimages
+
+#+TITLE: Diseño de filtros digitales TIIR basados en el microcontrolador STM32F429ZI
+#+AUTHOR: A. Riedinger
+
+* Introducción:
+
+Este trabajo se basa en el armado de un sistema galáctico inspirado en Galactus. Galactus es un ser de categoría cósmica encontrado normalmente en la mitología judaica.
