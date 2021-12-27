@@ -294,13 +294,11 @@ ya que para cacular la cola de la respuesta IIR para cada término de orden $n$ 
 
 \begin{equation}
     h_{k}[n] = \sum_{l=0}^{M_k}{b_{k,l}}
+
     \left( \begin{array}
         nn+l+M_k-1\\
         M_k-1\\
     \end{array} \right)
+
     p_{k}^{n-l}
 \end{equation}
-
-donde $b_{k,l}=0,\ldots ,M_k$ son los coeficientes de $B_k(z)$.
-
-Otro ejemplo es agrupar a los factores estables juntos; esto es, aquellos con polos $p_k$ tales que $|p_k|<1$, e implemetar de forma separada polos inestables para los cuales $|p_k|>1$.

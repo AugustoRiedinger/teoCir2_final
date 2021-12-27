@@ -1,4 +1,4 @@
-% Created 2021-12-27 lun 17:52
+% Created 2021-12-27 lun 19:25
 % Intended LaTeX compiler: pdflatex
 \documentclass[conference]{IEEEtran}
 \usepackage[utf8]{inputenc}
@@ -30,7 +30,7 @@
 
 
 \section{Introducción:}
-\label{sec:orga95c97e}
+\label{sec:org493850a}
 
 Un filtro es un sistema, que dependiendo de algunos parámetros, realiza un proceso de discriminación de una señal de entrada obteniendo  variaciones en su salida. Los filtros digitales tienen como entrada una señal digital y a su salida tienen otra señal digital, pudiendo haber cambiado en amplitud, frecuencia o fase dependiendo de las características del filtro.
 
@@ -41,7 +41,7 @@ El filtrado digital consiste en la realización interna de un procesado de datos
 Los filtros digitales se usan frecuentemente para tratamiento digital de la imagen o para tratamiento del sonido digital.
 
 \subsection{Tipos de filtros:}
-\label{sec:orgbfb793d}
+\label{sec:org6fd305f}
 
 Hay varios tipos de filtros así como distintas clasificaciones para estos filtros:
 
@@ -90,14 +90,14 @@ Hay varios tipos de filtros así como distintas clasificaciones para estos filtr
 \end{itemize}
 
 \subsection{Comparación entre los distintos tipos de filtros:}
-\label{sec:org16da019}
+\label{sec:org1d56f42}
 
 Los filtros IIR son ampliamente utilizados debido a su bajo costo computacional. Los filtros FIR, en cambio, permiten la posibilidad de implementar filtros lineales digitales con un retraso de grupo constante para todas las frecuencias. La contrapartida es que, para alcanzar funciones de transferencia de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo,  La contrapartida es que, para alcanzar funciones de transfer    de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo, un filtro general FIR de orden \(N\) requieren \(N+1\) múltiplos y \(N\) sumandos.
 
 En ciertos casos, sin embargo, es posible diseñar filtros FIR con costo computacional comparable al de los filtros IIR mientras se mantienen las ventajas que proporcionan los filtros FIR. Este tipo de filtros FIR puede ser implementado de forma eficiente mediante secuencias truncadas de bajo orden de filtros IIR. A este tipo de filtros se los conoce como filtro TIIR.
 
 \subsection{Expresión general de un filtro digital:}
-\label{sec:org27aeac1}
+\label{sec:org14b5e9d}
 
 En muchas aplicaciones del procesado de señales es necesario diseñar dispositivos o algoritmos que realicen operaciones sobre las señales y que los englobaremos bajo la denominación genérica de sistemas.
 
@@ -174,7 +174,7 @@ donde \(z=A\exp(j\Omega)\) es la variable compleja en forma polar. Particularmen
 
 donde los coeficientes \(a_m\) y \(b_k\) son los coeficientes que definen el filtro, por lo tanto el diseño consiste en calcularlos. Como regla general se suele dejar el término \(a_0=1\).
 \subsection{Definición de filtros FIR e IIR:}
-\label{sec:orgd6d6011}
+\label{sec:org1a9c6b5}
 
 Un filtro FIR causal de orden \(N\) convencional se puede representar según:
 
@@ -234,7 +234,7 @@ Esto es, si los coeficientes invertidos son conjugados complejos de la próxima 
     \tau_d (f) = \frac{N}{2}
 \end{equation}
 \section{Filtros IIR truncados (TIIR):}
-\label{sec:org9358698}
+\label{sec:org917e0ea}
 
 Considere un filtro FIR con una secuencia geométricamente truncada \(h_0,h_0p,\ldots , h_0 p^N\) como respuesta al impulso. Este filtro tiene la misma respuesta al impulso para los primeros \(N+1\) términos que un filtro IIR de un solo polo con función de transferencia
 
@@ -271,7 +271,7 @@ Existe una cancelación de polo-cero en la representación dada en la Ec. \ref{e
 
 La idea de esta sección funciona solo para casos en los que la multiplicidad de cada polo es uno; tal que cada modo exhiba un decaimiento exponencial simple.
 \subsection{Extensión a secuencias TIIR de alto orden:}
-\label{sec:org84fd683}
+\label{sec:org77b08fc}
 
 Se puede extender la idea ilustrada en la sección anterior para el caso de un polo simple con el objetivo de computar secuencias TIIR de cualquier denominador de \(H(z)\). El procedimiento general es el de encontrar una la "cola" la función transferencia IIR:
 
@@ -301,10 +301,55 @@ Una vez obtenida \(B'(z)\), se tiene que \(H_{IIR}' = \nicefrac{B'(z)}{A(z)}\), 
 El sistema correspondiente será entonces:
 
 \begin{equation}
-    y[n] = - \sum_{k=1}^{P}{a_k y[n-k]} + \sum_{l=0}^{P}{b_l x[n-l]} - \sum_{m=0}^{P-1}{b_m ' x[n-m-(N+1)]}
+\begin{split}
+    y[n] =& - \sum_{k=1}^{P}{a_k y[n-k]} + \sum_{l=0}^{P}{b_l x[n-l]}-\\
+   & - \sum_{m=0}^{P-1}{b_m ' x[n-m-(N+1)]}
+\end{split}
+    \label{eq:25}
 \end{equation}
 
 El hecho de que los denominadores de las funciones transferencia \(H_{IIR}(z)\) y \(H_{IIR}'(z)\) son los mismos permite un menor costo computacional debido al hecho que el IIR original y la $\backslash$"cola$\backslash$" IIR dinámica son las mismas y no se necesita realizar procedimientos duplicados. El costo computacional de este sistema IIR de orden \(P\) es de \(3P+1\) multiplicandos y \(3P-2\) sumandos, independiente de \(N\). Así, una ganancia computacional con esta clase de filtros FIR es conseguida si \(N>3P\).
 
 El costo de almacenamiento para este filtro son \(P\) muestras de salida para la realimentación dinámica IIR, \(N\) muestras de entrada para el filtro FIR, y un adicional de \(P\) muestras de entrada para la cancelación de la $\backslash$"cola$\backslash$"; significando \(N+P\) muestras de entradas con retraso, de las cuales solo las últimas \(P\) son utilizadas, y \(P\) muestras de salida con retraso. Así, el algoritmo FIR requiere \(2P\) más de almacenamiento que una implementación FIR directa.
+\subsection{Otras arquitecutras:}
+\label{sec:org12164b2}
+
+La implementación directa especificada según la Ec. \ref{eq:25} puede ser no deseada por varias razones. Por ejemplo, uno puede optar por utilizar una estructura factorizada tal como la forma bicuadrática cascada o la forma de fracciones paralelas parciales. Esta última está dada como:
+
+\begin{equation}
+    H(z) = \sum_{k=1}^{N_p}{\sum_{l=1}^{M_k}{\frac{C_{k,l}}{(1-p_k z^{-1})^l}}}
+    \label{eq:26}
+\end{equation}
+
+donde \(N_p\) es el número de polos distintos, y \(M_k\) es la multiplicidad del polo número \(k\). El término \((k,l)\) es la expansión por fracciones parciales correspondiente al filtro con respuesta al impulso
+
+\begin{equation}
+    h_{k,l}[n] = C_{k,l}
+    \left( \begin{array}
+        nn+l-1\\
+        n-1\\
+    \end{array} \right)
+    p_{k}^{n}
+\end{equation}
+
+Para formar el filtro TIIR, una cola del filtro IIR es derivada por cada fracción parcial utilizando división sintética como se demostró en la sección anterior. Cada respuesta TIIR es calculada de forma separada, y los resultados son sumados para formar la respuesta completa. La factorización no debe ser necesariamente completa como se muestra en la Ec. \ref{eq:26}. Es posible optar por un nivel intermedio de factorización, dejando algunos factores juntos y otros separados. Por ejemplo, se puede optar por agrupar los pares conjugados complejos para evitar aritmética compleja. Alternativamente, se puede dejar los terminos con los mismos polos juntos, según:
+
+\begin{equation}
+    H(z) = \sum_{k=1}^{N_p}{\frac{B_k(z)}{(z-p_k)^{M_k}}}
+\end{equation}
+
+ya que para cacular la cola de la respuesta IIR para cada término de orden \(n\) se necesita un polinomio de orden \(n-1\) en el numerador de todas formas. La respuesta al impulso de  cada fracción parcial \(k\) en este caso es:
+
+\begin{equation}
+    h_{k}[n] = \sum_{l=0}^{M_k}{b_{k,l}}
+    \left( \begin{array}
+        nn+l+M_k-1\\
+        M_k-1\\
+    \end{array} \right)
+    p_{k}^{n-l}
+\end{equation}
+
+donde \(b_{k,l}=0,\ldots ,M_k\) son los coeficientes de \(B_k(z)\).
+
+Otro ejemplo es agrupar a los factores estables juntos; esto es, aquellos con polos \(p_k\) tales que \(|p_k|<1\), e implemetar de forma separada polos inestables para los cuales \(|p_k|>1\).
 \end{document}
