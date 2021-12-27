@@ -53,6 +53,12 @@ Hay varios tipos de filtros así como distintas clasificaciones para estos filtr
    + Fase lineal.
    + Laticce.
 
+** Comparación entre los distintos tipos de filtros:
+
+Los filtros IIR son ampliamente utilizados debido a su bajo costo computacional. Los filtros FIR, en cambio, permiten la posibilidad de implementar filtros lineales digitales con un retraso de grupo constante para todas las frecuencias. La contrapartida es que, para alcanzar funciones de transferencia de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo,  La contrapartida es que, para alcanzar funciones de transfer    de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo, un filtro general FIR de orden $N$ requieren $N+1$ múltiplos y $N$ sumandos.
+
+En ciertos casos, sin embargo, es posible diseñar filtros FIR con costo computacional comparable al de los filtros IIR mientras se mantienen las ventajas que proporcionan los filtros FIR. Este tipo de filtros FIR puede ser implementado de forma eficiente mediante secuencias truncadas de bajo orden de filtros IIR. A este tipo de filtros se los conoce como filtro TIIR.
+
 ** Expresión general de un filtro digital:
 
 En muchas aplicaciones del procesado de señales es necesario diseñar dispositivos o algoritmos que realicen operaciones sobre las señales y que los englobaremos bajo la denominación genérica de sistemas.
@@ -123,3 +129,79 @@ donde $z=A\exp(j\Omega)$ es la variable compleja en forma polar. Particularmente
 \end{equation}
 
 donde los coeficientes $a_m$ y $b_k$ son los coeficientes que definen el filtro, por lo tanto el diseño consiste en calcularlos. Como regla general se suele dejar el término $a_0=1$.
+** Definición de filtros FIR e IIR:
+
+Un filtro FIR causal de orden $N$ convencional se puede representar según:
+
+\begin{equation}
+    y[n] = \sum_{k=0}^{N}{h_k x[n-k]}
+\end{equation}
+
+Donde la función de transferencia tiene la siguiente forma:
+
+\begin{equation}
+    H_{FIR}(z) = h_0 + h_1 z^{-1} + \ldots + h_N z^{-N} = z^{-N} C(z)
+\end{equation}
+
+Y se define a $C(z)$ como el polinomio de orden $N$ formado por los coeficientes $h_k$.
+
+En cambio, un filtro IIR causal de orden $P$ tiene la relación:
+
+\begin{equation}
+    y[n] = - \sum_{k=1}^{P}{a_k - y[n-k]} + \sum_{l=0}^{P}{b_l x[n-l]}
+\end{equation}
+
+Con la función transferencia correspondiente es:
+
+\begin{equation}
+    H_{IIR}(z) = \frac{b_0 + b_1 z^{-1} + \ldots + b_P z^{-P}}{1 + a_1 z^{-1} + \ldots + a_P z^{-P}} = \frac{B(z)}{A(z)}
+\end{equation}
+
+Por tanto, $A(z)$ y $B(z)$ serán:
+
+\begin{equation}
+    A(z) = z^{P} + a_1 z^{P-1} + \ldots + a_P
+\end{equation}
+
+\begin{equation}
+    B(z) = b_0 z^P + b_1 z^{P-1} + \ldots + b_P
+\end{equation}
+
+Y pueden ser asumidos como los polinomios de grado $P$ en $z$.
+
+El retardo de grupo se define como:
+
+\begin{equation}
+    \tau_d(\omega) = - \frac{d \: \arg\{H(e^{j\omega)}\}}{d\omega}
+\end{equation}
+
+El retardo de grupo a frecuencia normalizada $\omega=\nicefrac{2 \pi f}{f_s}$; donde $f_s$ es la frecuencia de muestreo; es el número de muestras con retraso experiezadas por la amplitud de la envolvente de banda ancha centrada en $\omega$.
+
+Un filtro de fase linear es aquel cuya respuesta en fase a una determinada frecuencia es una función lineal de la frecuencia; esto es, $\arg \{H(e^{j\omega})\}=K1\omega + K2$ para constantes $K1$ y $K2$. A partir de esta propiedad, se nota inmediatamente que el retardo de grupo es constante a todas las frecuencias. Filtro con una respuesta en fase lineal son usualmente los buscados, debido a que no poseen distorsión temporal dependiente de la frecuencia. Un filtro IIR con polos distintos de cero puede tener una fase lineal. Sin embargo, un filtro FIR con coeficiente $h_0,\ldots , h_N$ tiene fase lineal si existe un $\varphi$ tal que para todo $k \in \{0,\ldots , N\}$:
+
+\begin{equation}
+    h_{N-k} = e^{j\varphi} h^{*}_k
+\end{equation}
+
+Esto es, si los coeficientes invertidos son conjugados complejos de la próxima secuencia sumados a una constante de cambio de fase, el retardo de grupo será entonces:
+
+\begin{equation}
+    \tau_d (f) = \frac{N}{2}
+\end{equation}
+** Filtros IIR truncados (TIIR):
+
+Considere un filtro FIR con una secuencia geométricamente truncada $h_0,h_0p,\ldots , h_0 p^N$ como respuesta al impulso. Este filtro tiene la misma respuesta al impulso para los primeros $N+1$ términos que un filtro IIR de un solo polo con función de transferencia
+
+\begin{equation}
+    H_{IIR}(z) = \frac{h_0}{1- p z^{-1}}
+\end{equation}
+
+Si se substrae la "cola" de la respuesta al impulso, se obtiene:
+
+\begin{equation}
+    H_{FIR} = h_0 + h_0 p z^{-1} + \ldots + h_0 p^N z^{-N}
+\end{equation}
+
+\begin{equation}
+    H_{FIR} = h_0 \frac{p^{N-1} z^{-(N+1)}}{1 - p z^{-1}}
+\end{equation}
