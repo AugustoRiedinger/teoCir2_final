@@ -188,7 +188,7 @@ Esto es, si los coeficientes invertidos son conjugados complejos de la próxima 
 \begin{equation}
     \tau_d (f) = \frac{N}{2}
 \end{equation}
-** Filtros IIR truncados (TIIR):
+* Filtros IIR truncados (TIIR):
 
 Considere un filtro FIR con una secuencia geométricamente truncada $h_0,h_0p,\ldots , h_0 p^N$ como respuesta al impulso. Este filtro tiene la misma respuesta al impulso para los primeros $N+1$ términos que un filtro IIR de un solo polo con función de transferencia
 
@@ -204,4 +204,59 @@ Si se substrae la "cola" de la respuesta al impulso, se obtiene:
 
 \begin{equation}
     H_{FIR} = h_0 \frac{p^{N-1} z^{-(N+1)}}{1 - p z^{-1}}
+    \label{eq:15}
 \end{equation}
+
+La recursión en el dominio del tiempo para este filtro estará dada como:
+
+\begin{equation}
+    y[n] = \sum_{k=0}^{N}{h_0 p^k x[n-k]}
+    \label{eq:16}
+\end{equation}
+
+\begin{equation}
+   y[n] = p y[n-1] + h_0 \{x[n] - p^{N+1} x[n - (N+1)]\}
+   \label{eq:17}
+\end{equation}
+
+Se nota que la primer formulación (Ec. \ref{eq:16}) requiere $N+1$ múltiplos y $N$ sumandos para ser implementada de forma directa; mientras que la segunda ecuación (Ec. \ref{eq:17}) requiere de solo tres múltiplos y dos sumandos, independientemente de $N$. Por tanto, se ve que, si se puede representar un FIR como una secuencia exponencial truncada, se encontraría una forma reducida de computar el filtro. Notar que el término $x[n - (N+1)]$ en la Ec. \ref{eq:17} todavía requiere un retardo para ser mantenido; y por tanto, no hay un reducción en cuanto a almacenamiento.
+
+Existe una cancelación de polo-cero en la representación dada en la Ec. \ref{eq:15}. Si $|p|<1$ no hay problemas, ya que el sistema será inherentemente estable. Si $|p|>1$, sin embargo, entonces existe un problema potencial debido al "modo oculto".
+
+La idea de esta sección funciona solo para casos en los que la multiplicidad de cada polo es uno; tal que cada modo exhiba un decaimiento exponencial simple.
+** Extensión a secuencias TIIR de alto orden:
+
+Se puede extender la idea ilustrada en la sección anterior para el caso de un polo simple con el objetivo de computar secuencias TIIR de cualquier denominador de $H(z)$. El procedimiento general es el de encontrar una la "cola" la función transferencia IIR:
+
+\begin{equation}
+    H_{IIR}'(z) = h_0' z^{-1} + h_1' z^{-2} + \ldots = h_{N+1} z^{-1} + h_{N+2} z^{-2} + \ldots
+\end{equation}
+
+cuya respuesta al impulso, excepto por un cambio temporal de $N$ pasos, es igual a la "cola" de la función transferencia $H_{IIR}(z)$, la cual se pretende truncar luego del paso $N$.
+
+Entonces, multiplicando $H_{IIR}(z)$ por $z^N$ se obtiene:
+
+\begin{align}
+    z^N H_{IIR} (z) =& h_0 z^N + \ldots + h_{N-1}z + h_N + h_{N+1} z^{-1} + \ldots \\
+    =& C(z) + H_{IIR}'(z) \\
+    =& \frac{z^N B(z)}{A(z)} \\
+    =& C(z) + \frac{B'(z)}{A(z)}
+\end{align}
+
+donde $O[B'(z)] < O[A(z)] = P$. Se puede asumir que $O[B'(z)]=P-1$. $B'(z)$ es única y se puede obtener al realizar la división sintética de $z^N B(z)$ por $A(z)$ y encontrar el sobrante.
+
+Una vez obtenida $B'(z)$, se tiene que $H_{IIR}' = \nicefrac{B'(z)}{A(z)}$, y se puede escribir:
+
+\begin{equation}
+    H_{FIR}(z) = H_{IIR}(z) - z^{-N} H_{IIR}'(z) = \frac{B(z)-z^{-N}B'(z)}{A(z)}
+\end{equation}
+
+El sistema correspondiente será entonces:
+
+\begin{equation}
+    y[n] = - \sum_{k=1}^{P}{a_k y[n-k]} + \sum_{l=0}^{P}{b_l x[n-l]} - \sum_{m=0}^{P-1}{b_m ' x[n-m-(N+1)]}
+\end{equation}
+
+El hecho de que los denominadores de las funciones transferencia $H_{IIR}(z)$ y $H_{IIR}'(z)$ son los mismos permite un menor costo computacional debido al hecho que el IIR original y la \"cola\" IIR dinámica son las mismas y no se necesita realizar procedimientos duplicados. El costo computacional de este sistema IIR de orden $P$ es de $3P+1$ multiplicandos y $3P-2$ sumandos, independiente de $N$. Así, una ganancia computacional con esta clase de filtros FIR es conseguida si $N>3P$.
+
+El costo de almacenamiento para este filtro son $P$ muestras de salida para la realimentación dinámica IIR, $N$ muestras de entrada para el filtro FIR, y un adicional de $P$ muestras de entrada para la cancelación de la \"cola\"; significando $N+P$ muestras de entradas con retraso, de las cuales solo las últimas $P$ son utilizadas, y $P$ muestras de salida con retraso. Así, el algoritmo FIR requiere $2P$ más de almacenamiento que una implementación FIR directa.
