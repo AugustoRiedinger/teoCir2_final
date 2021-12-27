@@ -1,10 +1,11 @@
 #+LATEX_CLASS: IEEEtran
+#+LATEX_CLASS_OPTIONS: [conference]
+#+LANGUAGE: spanish
 #+LATEX_COMPILER: pdflatex
-#+LATEX_HEADER: \input{~/org/latex/ieee.tex}
-#+STARTUP: showeverything inlineimages
-
 #+TITLE: Diseño de filtros digitales TIIR basados en el microcontrolador STM32F429ZI
-#+AUTHOR: A. Riedinger
+#+AUTHOR:
+#+LATEX_HEADER: \input{~/org/latex/author_TeoCir2_Riedinger.tex}
+#+LATEX_HEADER: \input{~/org/latex/ieee.tex}
 
 * Introducción:
 
