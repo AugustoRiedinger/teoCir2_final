@@ -1,4 +1,4 @@
-% Created 2021-12-28 mar 11:28
+% Created 2021-12-28 mar 13:02
 % Intended LaTeX compiler: pdflatex
 \documentclass[conference]{IEEEtran}
 \usepackage[utf8]{inputenc}
@@ -30,7 +30,7 @@
 
 
 \section{Introducción:}
-\label{sec:org1361d18}
+\label{sec:org9c27a80}
 
 Un filtro es un sistema, que dependiendo de algunos parámetros, realiza un proceso de discriminación de una señal de entrada obteniendo  variaciones en su salida. Los filtros digitales tienen como entrada una señal digital y a su salida tienen otra señal digital, pudiendo haber cambiado en amplitud, frecuencia o fase dependiendo de las características del filtro.
 
@@ -41,7 +41,7 @@ El filtrado digital consiste en la realización interna de un procesado de datos
 Los filtros digitales se usan frecuentemente para tratamiento digital de la imagen o para tratamiento del sonido digital.
 
 \subsection{Tipos de filtros:}
-\label{sec:org785ec91}
+\label{sec:org788b2ad}
 
 Hay varios tipos de filtros así como distintas clasificaciones para estos filtros:
 
@@ -90,14 +90,14 @@ Hay varios tipos de filtros así como distintas clasificaciones para estos filtr
 \end{itemize}
 
 \subsection{Comparación entre los distintos tipos de filtros:}
-\label{sec:org16ee96a}
+\label{sec:org768051f}
 
 Los filtros IIR son ampliamente utilizados debido a su bajo costo computacional. Los filtros FIR, en cambio, permiten la posibilidad de implementar filtros lineales digitales con un retraso de grupo constante para todas las frecuencias. La contrapartida es que, para alcanzar funciones de transferencia de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo,  La contrapartida es que, para alcanzar funciones de transfer    de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo, un filtro general FIR de orden \(N\) requieren \(N+1\) múltiplos y \(N\) sumandos.
 
 En ciertos casos, sin embargo, es posible diseñar filtros FIR con costo computacional comparable al de los filtros IIR mientras se mantienen las ventajas que proporcionan los filtros FIR. Este tipo de filtros FIR puede ser implementado de forma eficiente mediante secuencias truncadas de bajo orden de filtros IIR. A este tipo de filtros se los conoce como filtro TIIR.
 
 \subsection{Expresión general de un filtro digital:}
-\label{sec:org4667296}
+\label{sec:org960665f}
 
 En muchas aplicaciones del procesado de señales es necesario diseñar dispositivos o algoritmos que realicen operaciones sobre las señales y que los englobaremos bajo la denominación genérica de sistemas.
 
@@ -174,7 +174,7 @@ donde \(z=A\exp(j\Omega)\) es la variable compleja en forma polar. Particularmen
 
 donde los coeficientes \(a_m\) y \(b_k\) son los coeficientes que definen el filtro, por lo tanto el diseño consiste en calcularlos. Como regla general se suele dejar el término \(a_0=1\).
 \subsection{Definición de filtros FIR e IIR:}
-\label{sec:orgc7d8027}
+\label{sec:orgc05a6f7}
 
 Un filtro FIR causal de orden \(N\) convencional se puede representar según:
 
@@ -238,7 +238,7 @@ Esto es, si los coeficientes invertidos son conjugados complejos de la próxima 
     \tau_d (f) = \frac{N}{2}
 \end{equation}
 \section{Filtros IIR truncados (TIIR):}
-\label{sec:org0be98ea}
+\label{sec:orge0e7dc0}
 
 Considere un filtro FIR con una secuencia geométricamente truncada \(h_0,h_0p,\ldots , h_0 p^N\) como respuesta al impulso. Este filtro tiene la misma respuesta al impulso para los primeros \(N+1\) términos que un filtro IIR de un solo polo con función de transferencia
 
@@ -275,7 +275,7 @@ Existe una cancelación de polo-cero en la representación dada en la Ec. \ref{e
 
 La idea de esta sección funciona solo para casos en los que la multiplicidad de cada polo es uno; tal que cada modo exhiba un decaimiento exponencial simple.
 \subsection{Extensión a secuencias TIIR de alto orden:}
-\label{sec:org7fabdbb}
+\label{sec:orga4946a0}
 
 Se puede extender la idea ilustrada en la sección anterior para el caso de un polo simple con el objetivo de computar secuencias TIIR de cualquier denominador de \(H(z)\). El procedimiento general es el de encontrar una la "cola" la función transferencia IIR:
 
@@ -316,7 +316,7 @@ El hecho de que los denominadores de las funciones transferencia \(H_{IIR}(z)\) 
 
 El costo de almacenamiento para este filtro son \(P\) muestras de salida para la realimentación dinámica IIR, \(N\) muestras de entrada para el filtro FIR, y un adicional de \(P\) muestras de entrada para la cancelación de la $\backslash$"cola$\backslash$"; significando \(N+P\) muestras de entradas con retraso, de las cuales solo las últimas \(P\) son utilizadas, y \(P\) muestras de salida con retraso. Así, el algoritmo FIR requiere \(2P\) más de almacenamiento que una implementación FIR directa.
 \subsection{Otras arquitecutras:}
-\label{sec:org5703225}
+\label{sec:orgfe2dcb4}
 
 La implementación directa especificada según la Ec. \ref{eq:25} puede ser no deseada por varias razones. Por ejemplo, uno puede optar por utilizar una estructura factorizada tal como la forma bicuadrática cascada o la forma de fracciones paralelas parciales. Esta última está dada como:
 
@@ -357,12 +357,12 @@ donde \(b_{k,l}=0,\ldots ,M_k\) son los coeficientes de \(B_k(z)\).
 
 Otro ejemplo es agrupar a los factores estables juntos; esto es, aquellos con polos \(p_k\) tales que \(|p_k|<1\), e implemetar de forma separada polos inestables para los cuales \(|p_k|>1\).
 \section{Filtros FFIR (\emph{Fast} FIR) de fase lineal:}
-\label{sec:org9800497}
+\label{sec:orgd1f98b6}
 
 La implementación de filtros como sistemas TIIR no tendría mucho sentido a menos que exista una ventaja que no sea posible con filtros IIR no-truncados. Esta ventaja radica en la posibilidad de realizar filtros de fase-lineal exacte. Se presentarán dos estrategias básicas para el diseño basado en filtros TIIR.
 
 \subsection{Método de diseño por factorización aditiva:}
-\label{sec:orgfb8321b}
+\label{sec:org78da0f6}
 
 Se vió que un filtro FIR tendrá fase linear si se cumple la Ec. \ref{eq:11}. Es posible mantener dicha relación utilizando filtros TIIR. Si \(H_{FIR}^{+}\) es una función transferencia TIIR tal que:
 
@@ -429,7 +429,7 @@ por lo que el retardo de grupo resulta en:
 
 Es relativamente complicado diseñar un FFIR para un determinado set de especificaciones utilizando el método de factorización aditiva debido a que no es intuitivamente obvio como controlar la magnitud \(H_{LPFIR}\left( e^{j\omega} \right)\). Sin embargo, para determinadas respuestas al impulso que están bien caracterizadas, ésta técnica provee una herramienta útil para el diseño de filtros FFIR.
 \subsection{Método de diseño por magnitud al cuadrado:}
-\label{sec:org727f319}
+\label{sec:org90d9ace}
 
 El siguiente método es tal vez de mayor utilidad para el diseño de filtros FFIR en aplicaciones de procesamiento de señal. Se comienza eligiendo una función transferencia no-negativa y real \(H^2(z)>0\) para la cual existe una función transferencia estable \(H(z)\) tal que:
 
@@ -496,7 +496,7 @@ La longitud \(N\) del filtro para \(H_{FIR}^{ +}(z)\) y \(H_{FIR}^{ -}(z)\) debe
 
 Se nota que la fase del filtro \(H(z)\) utilizada en el diseño de \(H^2_{FIR}(z)\) es irrelevante, y así, filtros IIR, que normalmente se considera que poseen una execiva distorsión de fase cerca de las frecuencias de corte, pueden ser utilizados. Por tanto, cualquier filtro IIR de tiempo discreto tal como Chebyshev, elíptico o Butterworth puede ser elegido como \(H(z)\) en la Ec. \ref{eq:57} y transformado a una magnitud cuadrada con fase lineal. Adicionalmente, el hecho de que la magnitud para \(H^2(z)\) es el doble de la distancia entre \(0 \: [dB]\) comparada con la magnitud de \(H(z)\) implica que las especificaciones en la banda de rechazo de \(H^2(z)\) deberían ser solo la mitad de las deseadas en cuanto a magnitud, mientras que en cambio, el ripple en la banda de paso de \(H(z)\) debe ser más de la mitad que las especificaciones de diseño deseadas.
 \subsection{Algoritmo de truncamiento refinado:}
-\label{sec:org7c9c355}
+\label{sec:orgdd40074}
 
 En ambos métodos descritos en las dos subsecciones anteriores, la longitud \(N\) está limitada por el aumento del error de cuantización en el filtro inestable \(H_{FIR}^{-}(z)\). Una forma de solucionar este incoveniente es implementar un piso significante \(\lambda_S\) sonbre el piso para presición numérica \(\lambda_P\). Si \(H(z)\) es la respuesta al impulso IIR sin truncar asociada a \(H_{FIR}^{ +}(z)\) como en la Ec. \ref{eq:60}; mientras \(H(z)\) sea estable, se tiene que \(|p_k|<1\), donde \(p_k\) son los polos de \(H(z)\), y consecuentemente de \(H_{FIR}^{ +}(z)\). Los polos de \(H_{FIR}^{-}(z)\) son \(\nicefrac{1}{p_k^{*}}\) y por tanto es inestable. Se realiza una expansión por fracciones parciales de \(H(z)\) y luego se observa la respuesta al impulso de cada fracción parcial. Se define un punto de corte \(N_k\) para la fraccion parcial número \(k\) en el tiempo más pequeño luego del cual la máxima respuesta al impulso se vuelve insignificante; esto es, \(\forall \: n > N_k, \: |\mu h_{k,n}| \leq \lambda_s\), donde \(\mu\) es la magnitud de entrada más grande. Se puede resolver
 
@@ -548,4 +548,41 @@ Combinando las Ec. \ref{eq:73} y \ref{eq:78}, y asumiendo \(M_k = 1\), se llega 
 \end{equation}
 
 Se nota que la presición, en bits, para las variables de estado debe ser almenos tres veces mayor que la presición de los datos para prevenir una acumulación de ruido significante. Este resultado es intuitivo ya que la parte significante de la respuesta al impulso debe trabajar en el rango dinámico especificado por la salida de mayor magnitud (que se puede asumir como \(1\) de forma normalizada) y \(\lambda_S\) en un periodo de \(N_k'\) muestras; mientras que el ruido en \(H_{FIR}^{-}(z)\) puede crecer en un periodo de hasta \(2N_k'\) muestras utilizando las mismas dinámicas. El análisis anterior no es generalmente aplicable cuando se trata con cantidades de punto flotante, debido a que el rango de significancia varía con el exponente. Asumiendo una entrada de energía constante, se ve que el análisis todavía se mantiene, ya que los pisos de significancia y presisición son aproximadamente constantes en un estado continuo.
+
+\subsection{Filtros TIIR en modo de magnitud unitaria:}
+\label{sec:org63d1f8e}
+
+Una tercera clase de filtros lineales consiste de respuestas TIIR puras con una longitud \(N\) tal que todos sus modos esten sobre el círculo unidad y que cada uno posea multiplicidad \(1\). Así, es posible asegurarque \(H_{\mu}(z)\) tendrá una fase lineal. Esto se puede observar en un filtro que satisfaga la Ec. \ref{eq:11}. Si no hay modos con multiplicidad mayor a \(1\), entonces la Ec. \ref{eq:11} no se satisface. Sin embargo, se pueden plantear cuidadosamente los ceros para forzar a que se cumpla la Ec. \ref{eq:11}.
+
+Aplicando el análisis de la subsección anterior, se ve a partir de la Ec. \ref{eq:73} que los \(N_k\) para este tipo de filtro serán todos infinito. En este caso, no es necesario resetear las variables de estado seguido, ya que el crecimiento en el error de cuantización será aditivo y no exponencial.
+
+Si se considera el peor escenario, el número de muestras en las cuales el error en el bit de menor significancia (LSB) se puede llegar a acumular antes de alcanzar el piso de significancia \(\lambda_s\) es aproximadamente
+
+\begin{equation}
+    N = \frac{\lambda_S}{\lambda_P}
+\end{equation}
+
+asumiendo que hay \(1 \: b\) de error en el LSB por muestra procesada. Si la media del ruido no es cero, entonces el error acumulado es aleatorio, significando que el error estándar crece proporcionalmente a la raíz cuadrada del número de muestras procesadas. Se examina entonces el error para que se encuentre a una distancia del LSB. Para un error acumulativo que se encuentra por debajo del piso de significancia se tiene que:
+
+\begin{equation}
+    3 \lambda_P \sqrt{N} < \lambda_S
+\end{equation}
+
+Resultando:
+
+\begin{equation}
+    N < \left( \frac{\lambda_S}{3 \lambda_P} \right)^2 \simeq \frac{4^G}{10}
+\end{equation}
+
+donde \(G\) es el número de bits de seguridad. De esta forma, se ve que los filtros TIIR con modos escondidos en el círculo unitario tiene propiedades de estabilidad deseables en comparación con los descritos en las dos secciones anteriores.
+
+Como la magnitud unitaria de estos filtros TIIR es cuasiestable y no necesita ser reseteada cada \(N\) ciclos, el número de computaciones necesarias para estabilizarlos puede ser reducido significantemente. Como un filtro FIR tiene memoria infinita, es suficiente realizar dos filtros en paralelo comenzando con solo \(N\) pasos antes de la transferencia de variables de estado.
+
+La respuesta al impulso de filtros TIIR con magnitud unitaria tiene la forma:
+
+\begin{equation}
+    h_k[n] = P_k(n) p_k^n = P_k(n) e^{j\omega_k n}
+\end{equation}
+
+para \(n=0,\ldots , N\), donde \(p_k\) es el polo único \(k\) y \(P_k(n)\) es el polinomio de grado \(m_k - 1\) tal que \(m_k\) es el múltiplo del polo \(k\).
 \end{document}
