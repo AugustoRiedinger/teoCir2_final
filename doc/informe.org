@@ -161,10 +161,12 @@ Por tanto, $A(z)$ y $B(z)$ serán:
 
 \begin{equation}
     A(z) = z^{P} + a_1 z^{P-1} + \ldots + a_P
+    \label{eq:8}
 \end{equation}
 
 \begin{equation}
     B(z) = b_0 z^P + b_1 z^{P-1} + \ldots + b_P
+    \label{eq:9}
 \end{equation}
 
 Y pueden ser asumidos como los polinomios de grado $P$ en $z$.
@@ -181,6 +183,7 @@ Un filtro de fase linear es aquel cuya respuesta en fase a una determinada frecu
 
 \begin{equation}
     h_{N-k} = e^{j\varphi} h^{*}_k
+    \label{eq:11}
 \end{equation}
 
 Esto es, si los coeficientes invertidos son conjugados complejos de la próxima secuencia sumados a una constante de cambio de fase, el retardo de grupo será entonces:
@@ -304,3 +307,70 @@ ya que para cacular la cola de la respuesta IIR para cada término de orden $n$ 
 donde $b_{k,l}=0,\ldots ,M_k$ son los coeficientes de $B_k(z)$.
 
 Otro ejemplo es agrupar a los factores estables juntos; esto es, aquellos con polos $p_k$ tales que $|p_k|<1$, e implemetar de forma separada polos inestables para los cuales $|p_k|>1$.
+* Filtros FFIR (/Fast/ FIR) de fase lineal:
+
+La implementación de filtros como sistemas TIIR no tendría mucho sentido a menos que exista una ventaja que no sea posible con filtros IIR no-truncados. Esta ventaja radica en la posibilidad de realizar filtros de fase-lineal exacte. Se presentarán dos estrategias básicas para el diseño basado en filtros TIIR.
+
+** Método de diseño por factorización aditiva:
+
+Se vió que un filtro FIR tendrá fase linear si se cumple la Ec. \ref{eq:11}. Es posible mantener dicha relación utilizando filtros TIIR. Si $H_{FIR}^{+}$ es una función transferencia TIIR tal que:
+
+\begin{equation}
+    H_{FIR}^{+}(z) = \sum_{k=0}^{N}{h_{k}^{ +}z^{-k}} = \frac{B^{ +}(z)-z^{-N}B^{ +}'(z)}{A^{ + }(z)}
+\end{equation}
+
+Formando la función transferencia de tiempo-contrario truncada:
+
+\begin{align}
+    H_{FIR}^{-}(z) =& \sum_{k=0}^{N}{h_{k}^{-}z^{-k}} \\
+                   =& \sum_{k=0}^{N}{h_{k}^{+*} z^{k-N}} \\
+                   =& z^{-N} \left[ H_{FIR}^{ +} \left( \frac{1}{z^{*}} \right) \right] ^{*} \\
+                   =& \frac{z^{-N} \left[ B^{ +} \left( \frac{1}{z^{*}} \right) - B^{ +}' \left( \frac{1}{z^{*}} \right)   \right] ^{*}}{\left[ A^{ + } \left( \frac{1}{z^{*}} \right) \right] ^{*}} \\
+                   =& \frac{-z B^{-}' (z) + z^{-N} B^{-}(z)}{A^{-}(z)}
+\end{align}
+
+donde los superíndices $+$ y $-$ denotan 'adelante' y filtro 'reverso-conjugado' respectivamente; y el superíndice $*$ denota conjugación compleja. De esta forma, comparando con las Ec. \ref{eq:8} y \ref{eq:9} se tiene:
+
+\begin{equation}
+    A^{-}(z) = 1 + a^{*}_1 z + \ldots + a^{*}_P z^P
+\end{equation}
+
+\begin{equation}
+    B^{-}(z) = b_0 + b^{*}_1 z + \ldots + b^{*}_P z^P
+\end{equation}
+
+Entonces:
+
+\begin{equation}
+    B^{-}'(z) = b_0^{*}' + b_1^{*}' z + \ldots + b_{P_1}^{*}' z^{P-1}
+\end{equation}
+
+Se asume que $B^{+}(z)$ y $B^{-}'(z)$ tienen ordenes $P$ y $P-1$ respectivamente. Si se asume que $H_{FIR}^{ +}(z)$ es un filtro TIIR estable, entonces $H_{FIR}^{-}(z)$ es un filtro TIIR inestable cuyos modos escondidos son conjugados recíprocos de los de $H_{FIR}^{ +}(z)$.
+
+Utilizando un cambio de tiempo arbitrario $M \geq 0$ y cambio de fase $\varphi$, se define el filtro:
+
+\begin{align}
+    H_{LPFIR}(z) =& H_{FIR}^{ + } (z) + e^{j\varphi} z^{-M} H_{FIR}^{-}(z) \\
+                 =& \sum_{k=0}^{N}{h_k^{ + } z^{-k}} + e^{j \varphi} \sum_{k=0}^{N}{h_k^{+*} z^{k-N-M}}
+\end{align}
+
+Se nota que este nuevo filtro FIR de longitud $M+N+1$ es invariante con respecto al orden reverso, conjugando los coeficientes, y multiplicando por un factor de fase $e^{j\varphi}$. De esta forma, se cumple la Ec. \ref{eq:11}; y así, $H_{LPFIR}(z)$ es un filtro FIR de fase lineal. Se puede ver la propiedad de fase lineal de forma más directa al notar primero que en el círculo unidad
+
+\begin{equation}
+    H_{FIR}^{-}(e^{j\omega}) = e^{-jN\omega} \left[ H_{FIR}^{ + } \left( e^{j\omega} \right ) \right]^{*}
+\end{equation}
+
+tal que
+
+\begin{align}
+    H_{LPFIR}(e^{j\omega}) =& H_{FIR}^{+}\left( e^{j\omega} \right) + e^{j\varphi} e^{-jM\omega} H_{FIR}^{-} \left( e^{j\omega} \right) \\
+                           =& e^{-j[(N + M)\omega + \varphi]/2} H_{FIR}^{ + } \left( e^{j\omega} \right)
+\end{align}
+
+por lo que el retardo de grupo resulta en:
+
+\begin{equation}
+    \tau_d = \frac{M+N}{2}
+\end{equation}
+
+Es relativamente complicado diseñar un FFIR para un determinado set de especificaciones utilizando el método de factorización aditiva debido a que no es intuitivamente obvio como controlar la magnitud $H_{LPFIR}\left( e^{j\omega} \right)$. Sin embargo, para determinadas respuestas al impulso que están bien caracterizadas, ésta técnica provee una herramienta útil para el diseño de filtros FFIR.
