@@ -1,4 +1,4 @@
-% Created 2021-12-27 lun 21:53
+% Created 2021-12-28 mar 10:22
 % Intended LaTeX compiler: pdflatex
 \documentclass[conference]{IEEEtran}
 \usepackage[utf8]{inputenc}
@@ -30,7 +30,7 @@
 
 
 \section{Introducción:}
-\label{sec:orged19651}
+\label{sec:org6c4e136}
 
 Un filtro es un sistema, que dependiendo de algunos parámetros, realiza un proceso de discriminación de una señal de entrada obteniendo  variaciones en su salida. Los filtros digitales tienen como entrada una señal digital y a su salida tienen otra señal digital, pudiendo haber cambiado en amplitud, frecuencia o fase dependiendo de las características del filtro.
 
@@ -41,7 +41,7 @@ El filtrado digital consiste en la realización interna de un procesado de datos
 Los filtros digitales se usan frecuentemente para tratamiento digital de la imagen o para tratamiento del sonido digital.
 
 \subsection{Tipos de filtros:}
-\label{sec:org5098539}
+\label{sec:orge97d6a8}
 
 Hay varios tipos de filtros así como distintas clasificaciones para estos filtros:
 
@@ -90,14 +90,14 @@ Hay varios tipos de filtros así como distintas clasificaciones para estos filtr
 \end{itemize}
 
 \subsection{Comparación entre los distintos tipos de filtros:}
-\label{sec:org6622b32}
+\label{sec:orgf094f08}
 
 Los filtros IIR son ampliamente utilizados debido a su bajo costo computacional. Los filtros FIR, en cambio, permiten la posibilidad de implementar filtros lineales digitales con un retraso de grupo constante para todas las frecuencias. La contrapartida es que, para alcanzar funciones de transferencia de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo,  La contrapartida es que, para alcanzar funciones de transfer    de magnitud similar, los filtros FIR requieren un orden mucho mayor que su contraparte IIR. Por ejemplo, un filtro general FIR de orden \(N\) requieren \(N+1\) múltiplos y \(N\) sumandos.
 
 En ciertos casos, sin embargo, es posible diseñar filtros FIR con costo computacional comparable al de los filtros IIR mientras se mantienen las ventajas que proporcionan los filtros FIR. Este tipo de filtros FIR puede ser implementado de forma eficiente mediante secuencias truncadas de bajo orden de filtros IIR. A este tipo de filtros se los conoce como filtro TIIR.
 
 \subsection{Expresión general de un filtro digital:}
-\label{sec:org29778f3}
+\label{sec:org568167b}
 
 En muchas aplicaciones del procesado de señales es necesario diseñar dispositivos o algoritmos que realicen operaciones sobre las señales y que los englobaremos bajo la denominación genérica de sistemas.
 
@@ -174,7 +174,7 @@ donde \(z=A\exp(j\Omega)\) es la variable compleja en forma polar. Particularmen
 
 donde los coeficientes \(a_m\) y \(b_k\) son los coeficientes que definen el filtro, por lo tanto el diseño consiste en calcularlos. Como regla general se suele dejar el término \(a_0=1\).
 \subsection{Definición de filtros FIR e IIR:}
-\label{sec:orgb1569b9}
+\label{sec:org8e77ac4}
 
 Un filtro FIR causal de orden \(N\) convencional se puede representar según:
 
@@ -200,6 +200,7 @@ Con la función transferencia correspondiente es:
 
 \begin{equation}
     H_{IIR}(z) = \frac{b_0 + b_1 z^{-1} + \ldots + b_P z^{-P}}{1 + a_1 z^{-1} + \ldots + a_P z^{-P}} = \frac{B(z)}{A(z)}
+    \label{eq:6}
 \end{equation}
 
 Por tanto, \(A(z)\) y \(B(z)\) serán:
@@ -237,7 +238,7 @@ Esto es, si los coeficientes invertidos son conjugados complejos de la próxima 
     \tau_d (f) = \frac{N}{2}
 \end{equation}
 \section{Filtros IIR truncados (TIIR):}
-\label{sec:org982088a}
+\label{sec:orgc1b224e}
 
 Considere un filtro FIR con una secuencia geométricamente truncada \(h_0,h_0p,\ldots , h_0 p^N\) como respuesta al impulso. Este filtro tiene la misma respuesta al impulso para los primeros \(N+1\) términos que un filtro IIR de un solo polo con función de transferencia
 
@@ -274,7 +275,7 @@ Existe una cancelación de polo-cero en la representación dada en la Ec. \ref{e
 
 La idea de esta sección funciona solo para casos en los que la multiplicidad de cada polo es uno; tal que cada modo exhiba un decaimiento exponencial simple.
 \subsection{Extensión a secuencias TIIR de alto orden:}
-\label{sec:org86b71b4}
+\label{sec:orgc0dd9b0}
 
 Se puede extender la idea ilustrada en la sección anterior para el caso de un polo simple con el objetivo de computar secuencias TIIR de cualquier denominador de \(H(z)\). El procedimiento general es el de encontrar una la "cola" la función transferencia IIR:
 
@@ -315,7 +316,7 @@ El hecho de que los denominadores de las funciones transferencia \(H_{IIR}(z)\) 
 
 El costo de almacenamiento para este filtro son \(P\) muestras de salida para la realimentación dinámica IIR, \(N\) muestras de entrada para el filtro FIR, y un adicional de \(P\) muestras de entrada para la cancelación de la $\backslash$"cola$\backslash$"; significando \(N+P\) muestras de entradas con retraso, de las cuales solo las últimas \(P\) son utilizadas, y \(P\) muestras de salida con retraso. Así, el algoritmo FIR requiere \(2P\) más de almacenamiento que una implementación FIR directa.
 \subsection{Otras arquitecutras:}
-\label{sec:org613b289}
+\label{sec:orgde79558}
 
 La implementación directa especificada según la Ec. \ref{eq:25} puede ser no deseada por varias razones. Por ejemplo, uno puede optar por utilizar una estructura factorizada tal como la forma bicuadrática cascada o la forma de fracciones paralelas parciales. Esta última está dada como:
 
@@ -356,17 +357,18 @@ donde \(b_{k,l}=0,\ldots ,M_k\) son los coeficientes de \(B_k(z)\).
 
 Otro ejemplo es agrupar a los factores estables juntos; esto es, aquellos con polos \(p_k\) tales que \(|p_k|<1\), e implemetar de forma separada polos inestables para los cuales \(|p_k|>1\).
 \section{Filtros FFIR (\emph{Fast} FIR) de fase lineal:}
-\label{sec:orga0c3d7b}
+\label{sec:org562afd0}
 
 La implementación de filtros como sistemas TIIR no tendría mucho sentido a menos que exista una ventaja que no sea posible con filtros IIR no-truncados. Esta ventaja radica en la posibilidad de realizar filtros de fase-lineal exacte. Se presentarán dos estrategias básicas para el diseño basado en filtros TIIR.
 
 \subsection{Método de diseño por factorización aditiva:}
-\label{sec:org2a5319c}
+\label{sec:org1ebb316}
 
 Se vió que un filtro FIR tendrá fase linear si se cumple la Ec. \ref{eq:11}. Es posible mantener dicha relación utilizando filtros TIIR. Si \(H_{FIR}^{+}\) es una función transferencia TIIR tal que:
 
 \begin{equation}
     H_{FIR}^{+}(z) = \sum_{k=0}^{N}{h_{k}^{ +}z^{-k}} = \frac{B^{ +}(z)-z^{-N}B^{ +}'(z)}{A^{ + }(z)}
+\label{eq:42}
 \end{equation}
 
 Formando la función transferencia de tiempo-contrario truncada:
@@ -377,6 +379,7 @@ Formando la función transferencia de tiempo-contrario truncada:
                    =& z^{-N} \left[ H_{FIR}^{ +} \left( \frac{1}{z^{*}} \right) \right] ^{*} \\
                    =& \frac{z^{-N} \left[ B^{ +} \left( \frac{1}{z^{*}} \right) - B^{ +}' \left( \frac{1}{z^{*}} \right)   \right] ^{*}}{\left[ A^{ + } \left( \frac{1}{z^{*}} \right) \right] ^{*}} \\
                    =& \frac{-z B^{-}' (z) + z^{-N} B^{-}(z)}{A^{-}(z)}
+\label{eq:47}
 \end{align}
 
 donde los superíndices \(+\) y \(-\) denotan 'adelante' y filtro 'reverso-conjugado' respectivamente; y el superíndice \(*\) denota conjugación compleja. De esta forma, comparando con las Ec. \ref{eq:8} y \ref{eq:9} se tiene:
@@ -408,6 +411,7 @@ Se nota que este nuevo filtro FIR de longitud \(M+N+1\) es invariante con respec
 
 \begin{equation}
     H_{FIR}^{-}(e^{j\omega}) = e^{-jN\omega} \left[ H_{FIR}^{ + } \left( e^{j\omega} \right ) \right]^{*}
+\label{eq:53}
 \end{equation}
 
 tal que
@@ -424,4 +428,70 @@ por lo que el retardo de grupo resulta en:
 \end{equation}
 
 Es relativamente complicado diseñar un FFIR para un determinado set de especificaciones utilizando el método de factorización aditiva debido a que no es intuitivamente obvio como controlar la magnitud \(H_{LPFIR}\left( e^{j\omega} \right)\). Sin embargo, para determinadas respuestas al impulso que están bien caracterizadas, ésta técnica provee una herramienta útil para el diseño de filtros FFIR.
+\subsection{Método de diseño por magnitud al cuadrado:}
+\label{sec:orgbe1d815}
+
+El siguiente método es tal vez de mayor utilidad para el diseño de filtros FFIR en aplicaciones de procesamiento de señal. Se comienza eligiendo una función transferencia no-negativa y real \(H^2(z)>0\) para la cual existe una función transferencia estable \(H(z)\) tal que:
+
+\begin{align}
+    H^2 \left( e^{j\omega} \right) =& |H \left( e^{j\omega} \right)|^2\\
+                     =& H \left( e^{j\omega} \right) * H \left( e^{j\omega} \right)
+\label{eq:57}
+\end{align}
+
+y con polinomios \(A^{ + }(z)\) y \(B^{ + }(z)\) tales que:
+
+\begin{align}
+    H(z) =& \sum_{k=0}^{\infty}{h_k z^{-k}}\\
+         =& \frac{B^{ + }(z)}{A^{ + }(z)}
+\end{align}
+
+Si los coeficientes de \(A^{ + }(z)\) y \(B^{ + }(z)\) son reales, entonces la Ec. \ref{eq:57} indica que:
+
+\begin{equation}
+    H^2 \left( e^{j\omega} \right) = H \left( e^{j\omega} \right) H \left( e^{-j\omega} \right)
+\end{equation}
+
+Formando la función transferencia TIIR
+
+\begin{align}
+    H_{FIR}^{ + }(z) =& \sum_{k=0}^{N}{h_k z^{-k}}\\
+                     =& \frac{B^{ + }(z) - z^{-N} B^{ + }'(z)}{A^{ + }(z)}
+\end{align}
+
+al igual que se hizo en la Ec. \ref{eq:42}. Similarmente, se forma \(H_{FIR}^{-}(z)\) al igual que en la Ec. \ref{eq:47}; y, en vistas de la Ec. \ref{eq:53} se ve que el filtro
+
+\begin{equation}
+    H^2_{FIR}(z) = H_{FIR}^{ + }(z) H_{FIR}^{ - }(z)
+\end{equation}
+
+tiene la propiedad de
+
+\begin{equation}
+    H_{FIR}^{ 2 }\left( e^{j\omega} \right) = e^{-jN\omega} | H_{FIR}^{ +}\left( e^{j\omega} \right) |
+\end{equation}
+
+y que obviamente es un filtro de fase lineal con retardo de grupo igual a:
+
+\begin{equation}
+    \tau_d = N
+\end{equation}
+
+Este filtro puede ser implementado como una cascada de \(H_{FIR}^{ +}(z)\) y \(H_{FIR}^{ -}(z)\), que a su vez pueden ser implementadas según la Ec. \ref{eq:25}.
+
+La relación entre \(H_{FIR}^{2}(z)\) y \(H^2(z)\) se puede ver considerando la convolución cíclica en la Ec. \ref{eq:6}:
+
+\begin{equation}
+    H_{FIR}^{ + } \left( e^{j\omega} \right) = \frac{1}{2\pi} \int_0^{2\pi}{H \left( e^{j\theta} \right) W_N \left[ e^{j(\omega-\theta)} \right] \: d\theta}
+\end{equation}
+
+donde
+
+\begin{equation}
+    W_N \left( e^{j\omega} \right) = \frac{\sin \left[ (N + \nicefrac{1}{2}) \omega\right]}{\sin (\nicefrac{\omega}{2})}
+\end{equation}
+
+La longitud \(N\) del filtro para \(H_{FIR}^{ +}(z)\) y \(H_{FIR}^{ -}(z)\) debe ser elegida lo suficientemente larga como para que el error inducido por la convolución periódica entre \(H \left( e^{j\omega} \right)\) y \(W_N \left( e^{j\omega} \right)\) no genere distorsión en la respuesta en frecuencia. De hecho, sin tener en cuenta el ruido por cuantización en el momento, como \(N\) crece hacia el infinito, \(W_N \left( e^{j\omega} \right)\) se aproxima el impulso centrado en \(\omega = 0\), y \(H_{FIR}^{ +}(z)\) converge a \(H(z)\).
+
+Se nota que la fase del filtro \(H(z)\) utilizada en el diseño de \(H^2_{FIR}(z)\) es irrelevante, y así, filtros IIR, que normalmente se considera que poseen una execiva distorsión de fase cerca de las frecuencias de corte, pueden ser utilizados. Por tanto, cualquier filtro IIR de tiempo discreto tal como Chebyshev, elíptico o Butterworth puede ser elegido como \(H(z)\) en la Ec. \ref{eq:57} y transformado a una magnitud cuadrada con fase lineal. Adicionalmente, el hecho de que la magnitud para \(H^2(z)\) es el doble de la distancia entre \(0 \: [dB]\) comparada con la magnitud de \(H(z)\) implica que las especificaciones en la banda de rechazo de \(H^2(z)\) deberían ser solo la mitad de las deseadas en cuanto a magnitud, mientras que en cambio, el ripple en la banda de paso de \(H(z)\) debe ser más de la mitad que las especificaciones de diseño deseadas.
 \end{document}
