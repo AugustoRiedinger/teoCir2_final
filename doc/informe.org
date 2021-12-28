@@ -406,6 +406,7 @@ Formando la función transferencia TIIR
 \begin{align}
     H_{FIR}^{ + }(z) =& \sum_{k=0}^{N}{h_k z^{-k}}\\
                      =& \frac{B^{ + }(z) - z^{-N} B^{ + }'(z)}{A^{ + }(z)}
+\label{eq:60}
 \end{align}
 
 al igual que se hizo en la Ec. \ref{eq:42}. Similarmente, se forma $H_{FIR}^{-}(z)$ al igual que en la Ec. \ref{eq:47}; y, en vistas de la Ec. \ref{eq:53} se ve que el filtro
@@ -443,3 +444,55 @@ donde
 La longitud $N$ del filtro para $H_{FIR}^{ +}(z)$ y $H_{FIR}^{ -}(z)$ debe ser elegida lo suficientemente larga como para que el error inducido por la convolución periódica entre $H \left( e^{j\omega} \right)$ y $W_N \left( e^{j\omega} \right)$ no genere distorsión en la respuesta en frecuencia. De hecho, sin tener en cuenta el ruido por cuantización en el momento, como $N$ crece hacia el infinito, $W_N \left( e^{j\omega} \right)$ se aproxima el impulso centrado en $\omega = 0$, y $H_{FIR}^{ +}(z)$ converge a $H(z)$.
 
 Se nota que la fase del filtro $H(z)$ utilizada en el diseño de $H^2_{FIR}(z)$ es irrelevante, y así, filtros IIR, que normalmente se considera que poseen una execiva distorsión de fase cerca de las frecuencias de corte, pueden ser utilizados. Por tanto, cualquier filtro IIR de tiempo discreto tal como Chebyshev, elíptico o Butterworth puede ser elegido como $H(z)$ en la Ec. \ref{eq:57} y transformado a una magnitud cuadrada con fase lineal. Adicionalmente, el hecho de que la magnitud para $H^2(z)$ es el doble de la distancia entre $0 \: [dB]$ comparada con la magnitud de $H(z)$ implica que las especificaciones en la banda de rechazo de $H^2(z)$ deberían ser solo la mitad de las deseadas en cuanto a magnitud, mientras que en cambio, el ripple en la banda de paso de $H(z)$ debe ser más de la mitad que las especificaciones de diseño deseadas.
+** Algoritmo de truncamiento refinado:
+
+En ambos métodos descritos en las dos subsecciones anteriores, la longitud $N$ está limitada por el aumento del error de cuantización en el filtro inestable $H_{FIR}^{-}(z)$. Una forma de solucionar este incoveniente es implementar un piso significante $\lambda_S$ sonbre el piso para presición numérica $\lambda_P$. Si $H(z)$ es la respuesta al impulso IIR sin truncar asociada a $H_{FIR}^{ +}(z)$ como en la Ec. \ref{eq:60}; mientras $H(z)$ sea estable, se tiene que $|p_k|<1$, donde $p_k$ son los polos de $H(z)$, y consecuentemente de $H_{FIR}^{ +}(z)$. Los polos de $H_{FIR}^{-}(z)$ son $\nicefrac{1}{p_k^{*}}$ y por tanto es inestable. Se realiza una expansión por fracciones parciales de $H(z)$ y luego se observa la respuesta al impulso de cada fracción parcial. Se define un punto de corte $N_k$ para la fraccion parcial número $k$ en el tiempo más pequeño luego del cual la máxima respuesta al impulso se vuelve insignificante; esto es, $\forall \: n > N_k, \: |\mu h_{k,n}| \leq \lambda_s$, donde $\mu$ es la magnitud de entrada más grande. Se puede resolver
+
+\begin{equation}
+    |h_{k,N_k}| = \frac{\lambda_s}{\mu}
+\end{equation}
+
+numéricamente utilizando la aproximación:
+
+\begin{align}
+    h_{k,n} \simeq & \sum_{l=0}^{M_k}{b_{k,l}(n-l)^{M_k-1} p_k^{n-l}}\\
+            \simeq & n^{M_k-1} p_k^{n} \sum_{l=0}^{M_k}{\frac{b_{k,l}p_k^{-l}}{(M_k-1)!}}\\
+            = & B_k n^{M_k-1} p_k^{n}
+\end{align}
+
+para grandes valores de $n$, donde $B_k$ es definida de forma implicita. Para $M_k=1$ se tiene:
+
+\begin{equation}
+    N_k = \frac{\log \left( \frac{\lambda_s}{\mu B_k}\right)}{\log (|p_k|)}
+    \label{eq:73}
+\end{equation}
+
+Así, si $N_k < N$, se puede truncar la fracción parcial $k$ a $N_k$ en luegar de $N$. Sin embargo, ya que $H(z)$ es estable y las respuestas debidas a las fracciones parciales $k$ luego del tiempo $N_k$ se encuntran por debajo del piso de significancia, esto no hace ninguna diferencia. El refinamiento se da por la implementación de $H_{FIR}^{ -}(z)$  como la suma de las inversas de fracciones parciales truncadas, pero con la fracción parcial $k$ truncada luego de $n=N_k$ muestras en lugar de $n=N$ si $N_k < N$. Por tanto, el modo inestable de $H_{FIR}^{ -}(z)$ debido al polo $\nicefrac{1}{p_k^{*}}$ solo necesita aumentar para tener una magnitud mayor al piso de significancia $\lambda_s$ y entonces posee menos tiempo para acumular exponencialmente ruido por cuantización.
+
+Se tiene que:
+
+\begin{equation}
+    H_{FIR}^{-}(z) = \sum_{k=1}^{N_p}{\frac{-z B_k^{-}'(z) + z^{-N_K'} B_k^{-}(z,N_K')}{(1-p_k^{*}z)^{M_k}}}
+\end{equation}
+
+Asumiendo que el error de cuantización ocurre en el orden del piso de presición $\lambda_P$, se tiene que $\rho^2_v \simeq \lambda_P^2$. Adicionalmente, el piso de significancia setea un nivel de tolerancia al ruido conveniente; por tanto, se puede asumir $\rho^2_v = \lambda_P^2$. De esta manera:
+
+\begin{align}
+    \lambda_S^2 \geq & \lambda_P^2 \frac{1-|p_k|^{-4N_k'}}{1-|p_k|^{-2}}\\
+                \geq & \lambda_P^2 \frac{1-|p_k|^{-4N_k'}}{|p_k|^{-2}-1}
+\end{align}
+
+Y así:
+
+\begin{equation}
+    \lambda_P \leq \lambda_S |p_k|^{2N_k' - 1} \sqrt{1-|pk|^2}
+    \label{eq:78}
+\end{equation}
+
+Combinando las Ec. \ref{eq:73} y \ref{eq:78}, y asumiendo $M_k = 1$, se llega a:
+
+\begin{equation}
+    \lambda_P \leq \frac{\lambda_S^3 \sqrt{1-|p_k|^2}}{\mu^2 |p_k| |B_k|^2}
+\end{equation}
+
+Se nota que la presición, en bits, para las variables de estado debe ser almenos tres veces mayor que la presición de los datos para prevenir una acumulación de ruido significante. Este resultado es intuitivo ya que la parte significante de la respuesta al impulso debe trabajar en el rango dinámico especificado por la salida de mayor magnitud (que se puede asumir como $1$ de forma normalizada) y $\lambda_S$ en un periodo de $N_k'$ muestras; mientras que el ruido en $H_{FIR}^{-}(z)$ puede crecer en un periodo de hasta $2N_k'$ muestras utilizando las mismas dinámicas. El análisis anterior no es generalmente aplicable cuando se trata con cantidades de punto flotante, debido a que el rango de significancia varía con el exponente. Asumiendo una entrada de energía constante, se ve que el análisis todavía se mantiene, ya que los pisos de significancia y presisición son aproximadamente constantes en un estado continuo.
