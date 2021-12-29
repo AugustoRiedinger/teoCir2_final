@@ -1,26 +1,12 @@
 #+TITLE: Algoritmo del filtro
 #+AUTHOR: A. Riedinger
-#+PROPERTY: header-args :tangle stm/main.c
-
-* ÍNDICE :toc:
-- [[#about][ABOUT]]
-  - [[#licencia][LICENCIA]]
-- [[#setup][SETUP]]
-  - [[#clock][CLOCK]]
-  - [[#librerias][LIBRERIAS]]
-  - [[#definición-variables][DEFINICIÓN VARIABLES]]
-  - [[#definición-funciones][DEFINICIÓN FUNCIONES]]
-- [[#main][MAIN]]
-
-* ABOUT
+#+PROPERTY: header-args :tangle src/main.c
 
 Aquí se desarrolla el algoritmo que representa el filtro.
 
 El programa se crea y debugea con el software AtollicTRUEStudio; y la edición del misma se realiza en Doom Emac's.
 
 El proyecto está creado, editado y probado en la placa STM32F429ZI; en caso de utilizar otra placa STM32 (inclusive STM32F4) se debería crear un proyecto en blanco para dicha placa y configurar el clock de manera que iguale al de este proyecto.
-
-** LICENCIA
 
 The MIT License (MIT)
 Copyright (c) 2019 STMicroelectronics
@@ -29,6 +15,14 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 + The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 + THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+* ÍNDICE :toc:
+- [[#setup][SETUP]]
+  - [[#clock][CLOCK]]
+  - [[#librerias][LIBRERIAS]]
+  - [[#definición-variables][DEFINICIÓN VARIABLES]]
+  - [[#definición-funciones][DEFINICIÓN FUNCIONES]]
+- [[#main][MAIN]]
 
 * SETUP
 
