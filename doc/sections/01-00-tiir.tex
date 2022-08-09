@@ -1,0 +1,43 @@
+\section{Filtros IIR truncados (TIIR)}
+    Considere un filtro FIR con una secuencia geométricamente truncada $h_0,h_0p,\ldots , h_0 p^N$ como respuesta al impulso. Este filtro tiene la misma respuesta al impulso para los primeros $N+1$ términos que un filtro IIR de un solo polo con función de transferencia
+
+    \begin{equation}
+      H_{IIR}(z) = \frac{h_0}{1- p z^{-1}}
+    \end{equation}
+
+    Si se substrae la "cola" de la respuesta al impulso, se obtiene:
+
+    \begin{equation}
+      H_{FIR} = h_0 + h_0 p z^{-1} + \ldots + h_0 p^N z^{-N}
+    \end{equation}
+
+    \begin{equation}
+      H_{FIR} = h_0 \frac{p^{N-1} z^{-(N+1)}}{1 - p z^{-1}}
+      \label{eq:15}
+    \end{equation}
+
+    La recursión en el dominio del tiempo para este filtro estará dada como:
+
+    \begin{equation}
+      y[n] = \sum_{k=0}^{N}{h_0 p^k x[n-k]}
+      \label{eq:16}
+    \end{equation}
+
+    \begin{equation}
+      y[n] = p y[n-1] + h_0 \{x[n] - p^{N+1} x[n - (N+1)]\}
+      \label{eq:17}
+    \end{equation}
+
+    Se nota que la primer formulación (Ec. \ref{eq:16}) requiere $N+1$ múltiplos y $N$ sumandos para ser implementada de forma directa; mientras que la segunda ecuación (Ec. \ref{eq:17}) requiere de solo tres múltiplos y dos sumandos, independientemente de $N$. Por tanto, se ve que, si se puede representar un FIR como una secuencia exponencial truncada, se encontraría una forma reducida de computar el filtro. Notar que el término $x[n - (N+1)]$ en la Ec. \ref{eq:17} todavía requiere un retardo para ser mantenido; y por tanto, no hay un reducción en cuanto a almacenamiento.
+
+    Existe una cancelación de polo-cero en la representación dada en la Ec. \ref{eq:15}. Si $|p|<1$ no hay problemas, ya que el sistema será inherentemente estable. Si $|p|>1$, sin embargo, entonces existe un problema potencial debido al "modo oculto".
+
+    La idea de esta sección funciona solo para casos en los que la multiplicidad de cada polo es uno; tal que cada modo exhiba un decaimiento exponencial simple.
+
+    \input{sections/01-01-sec-alto-orden}
+    \input{sections/01-02-otras-arq}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

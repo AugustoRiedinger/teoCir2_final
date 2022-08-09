@@ -1,0 +1,70 @@
+\subsection{Método de diseño por magnitud al cuadrado}
+    El siguiente método es tal vez de mayor utilidad para el diseño de filtros FFIR en aplicaciones de procesamiento de señal. Se comienza eligiendo una función transferencia no-negativa y real $H^2(z)>0$ para la cual existe una función transferencia estable $H(z)$ tal que:
+
+    \begin{align}
+      H^2 \left( e^{j\omega} \right) =& |H \left( e^{j\omega} \right)|^2\\
+      =& H \left( e^{j\omega} \right) * H \left( e^{j\omega} \right)
+         \label{eq:57}
+    \end{align}
+
+    y con polinomios $A^{ + }(z)$ y $B^{ + }(z)$ tales que:
+
+    \begin{align}
+      H(z) =& \sum_{k=0}^{\infty}{h_k z^{-k}}\\
+      =& \frac{B^{ + }(z)}{A^{ + }(z)}
+    \end{align}
+
+    Si los coeficientes de $A^{ + }(z)$ y $B^{ + }(z)$ son reales, entonces la Ec. \ref{eq:57} indica que:
+
+    \begin{equation}
+      H^2 \left( e^{j\omega} \right) = H \left( e^{j\omega} \right) H \left( e^{-j\omega} \right)
+    \end{equation}
+
+    Formando la función transferencia TIIR
+
+    \begin{align}
+      H_{FIR}^{+}(z) =& \sum_{k=0}^{N}{h_k z^{-k}} \\
+      =& \frac{B^{+}(z) - z^{-N} B^{+}\prime (z)}{A^{ + }(z)}
+         \label{eq:60}
+    \end{align}
+
+    al igual que se hizo en la Ec. \ref{eq:42}. Similarmente, se forma $H_{FIR}^{-}(z)$ al igual que en la Ec. \ref{eq:47}; y, en vistas de la Ec. \ref{eq:53} se ve que el filtro
+
+    \begin{equation}
+      H^2_{FIR}(z) = H_{FIR}^{ + }(z) H_{FIR}^{ - }(z)
+    \end{equation}
+
+    tiene la propiedad de
+
+    \begin{equation}
+      H_{FIR}^{ 2 }\left( e^{j\omega} \right) = e^{-jN\omega} | H_{FIR}^{ +}\left( e^{j\omega} \right) |
+    \end{equation}
+
+    y que obviamente es un filtro de fase lineal con retardo de grupo igual a:
+
+    \begin{equation}
+      \tau_d = N
+    \end{equation}
+
+    Este filtro puede ser implementado como una cascada de $H_{FIR}^{ +}(z)$ y $H_{FIR}^{ -}(z)$, que a su vez pueden ser implementadas según la Ec. \ref{eq:25}.
+
+    La relación entre $H_{FIR}^{2}(z)$ y $H^2(z)$ se puede ver considerando la convolución cíclica en la Ec. \ref{eq:6}:
+
+    \begin{equation}
+      H_{FIR}^{ + } \left( e^{j\omega} \right) = \frac{1}{2\pi} \int_0^{2\pi}{H \left( e^{j\theta} \right) W_N \left[ e^{j(\omega-\theta)} \right] \: d\theta}
+    \end{equation}
+
+    donde
+
+    \begin{equation}
+      W_N \left( e^{j\omega} \right) = \frac{\sin \left[ (N + \nicefrac{1}{2}) \omega\right]}{\sin (\nicefrac{\omega}{2})}
+    \end{equation}
+
+    La longitud $N$ del filtro para $H_{FIR}^{ +}(z)$ y $H_{FIR}^{ -}(z)$ debe ser elegida lo suficientemente larga como para que el error inducido por la convolución periódica entre $H \left( e^{j\omega} \right)$ y $W_N \left( e^{j\omega} \right)$ no genere distorsión en la respuesta en frecuencia. De hecho, sin tener en cuenta el ruido por cuantización en el momento, como $N$ crece hacia el infinito, $W_N \left( e^{j\omega} \right)$ se aproxima el impulso centrado en $\omega = 0$, y $H_{FIR}^{ +}(z)$ converge a $H(z)$.
+
+    Se nota que la fase del filtro $H(z)$ utilizada en el diseño de $H^2_{FIR}(z)$ es irrelevante, y así, filtros IIR, que normalmente se considera que poseen una execiva distorsión de fase cerca de las frecuencias de corte, pueden ser utilizados. Por tanto, cualquier filtro IIR de tiempo discreto tal como Chebyshev, elíptico o Butterworth puede ser elegido como $H(z)$ en la Ec. \ref{eq:57} y transformado a una magnitud cuadrada con fase lineal. Adicionalmente, el hecho de que la magnitud para $H^2(z)$ es el doble de la distancia entre $0 \: [dB]$ comparada con la magnitud de $H(z)$ implica que las especificaciones en la banda de rechazo de $H^2(z)$ deberían ser solo la mitad de las deseadas en cuanto a magnitud, mientras que en cambio, el ripple en la banda de paso de $H(z)$ debe ser más de la mitad que las especificaciones de diseño deseadas.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

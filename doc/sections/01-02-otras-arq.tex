@@ -1,0 +1,48 @@
+\subsection{Otras arquitecturas}
+    La implementación directa especificada según la Ec. \ref{eq:25} puede ser no deseada por varias razones. Por ejemplo, uno puede optar por utilizar una estructura factorizada tal como la forma bicuadrática cascada o la forma de fracciones paralelas parciales. Esta última está dada como:
+
+    \begin{equation}
+      H(z) = \sum_{k=1}^{N_p}{\sum_{l=1}^{M_k}{\frac{C_{k,l}}{(1-p_k z^{-1})^l}}}
+      \label{eq:26}
+    \end{equation}
+
+    donde $N_p$ es el número de polos distintos, y $M_k$ es la multiplicidad del polo número $k$. El término $(k,l)$ es la expansión por fracciones parciales correspondiente al filtro con respuesta al impulso
+
+    \begin{equation}
+      h_{k,l}[n] = C_{k,l}
+      \left(
+      \begin{matrix}
+               n + l - 1 \\
+               n - 1 \\
+      \end{matrix}
+      \right)
+           p_{k}^{n}
+         \end{equation}
+
+         Para formar el filtro TIIR, una cola del filtro IIR es derivada por cada fracción parcial utilizando división sintética como se demostró en la sección anterior. Cada respuesta TIIR es calculada de forma separada, y los resultados son sumados para formar la respuesta completa. La factorización no debe ser necesariamente completa como se muestra en la Ec. \ref{eq:26}. Es posible optar por un nivel intermedio de factorización, dejando algunos factores juntos y otros separados. Por ejemplo, se puede optar por agrupar los pares conjugados complejos para evitar aritmética compleja. Alternativamente, se puede dejar los terminos con los mismos polos juntos, según:
+
+         \begin{equation}
+           H(z) = \sum_{k=1}^{N_p}{\frac{B_k(z)}{(z-p_k)^{M_k}}}
+         \end{equation}
+
+         ya que para cacular la cola de la respuesta IIR para cada término de orden $n$ se necesita un polinomio de orden $n-1$ en el numerador de todas formas. La respuesta al impulso de  cada fracción parcial $k$ en este caso es:
+
+         \begin{equation}
+           h_{k}[n] = \sum_{l=0}^{M_k}{b_{k,l}}
+           \left(
+           \begin{matrix}
+                    n + l + M_{k} -1 \\
+                    M_{k} - 1 \\
+            \end{matrix}
+           \right)
+                p_{k}^{n-l}
+              \end{equation}
+
+              donde $b_{k,l}=0,\ldots ,M_k$ son los coeficientes de $B_k(z)$.
+
+              Otro ejemplo es agrupar a los factores estables juntos; esto es, aquellos con polos $p_k$ tales que $|p_k|<1$, e implemetar de forma separada polos inestables para los cuales $|p_k|>1$.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

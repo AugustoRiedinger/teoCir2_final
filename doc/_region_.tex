@@ -1,0 +1,39 @@
+\message{ !name(../main.tex)}\documentclass[journal,transmag]{IEEEtran}
+
+% Document preamble - loads packages
+\input{../config/preamble}
+% Document settings
+\input{../config/settings}
+
+
+\begin{document}
+
+\message{ !name(sections/02-01-fact-adit.tex) !offset(-11) }
+\subsection{Método de diseño por factorización aditiva}
+    Se vió que un filtro FIR tendrá fase linear si se cumple la Ec. \ref{eq:11}. Es posible mantener dicha relación utilizando filtros TIIR. Si $H_{FIR}^{+}$ es una función transferencia TIIR tal que:
+
+    \begin{equation}
+      H_{FIR}^{+}(z) = \sum_{k=0}^{N} {h_{k}^{+} \: z^{-k}} = \frac{B^{+}(z) - z^{-N} \: B^{+\prime} (z)}{A^{+} (z)}
+      \label{eq:42}
+    \end{equation}
+
+    Formando la función transferencia de tiempo-contrario truncada:
+
+    \begin{align}
+      H_{FIR}^{-} (z) =& \sum_{k=0}^{N} {h_{k}^{-} \: z^{-k}} \\
+      =& \sum_{k=0}^{N} {h_{k}^{+*} \: z^{k-N}} \\
+      =& z^{-N} \left[ H_{FIR}^{ +} \left( \frac{1}{z^{*}} \right) \right] ^{*} \\
+      =& \frac{z^{-N} \left[ B^{+} \left( \frac{1}{z^{*}} \right) - B^{+}' \left( \frac{1}{z^{*}} \right) \right] ^{*}}{\left[ A^{ + } \left( \frac{1}{z^{*}} \right) \right] ^{*}} \\
+      =& \frac{-z \: B^{-\prime} (z) + z^{-N} \: B^{-} \: (z)}{A^{-}  (z)}
+         \label{eq:47}
+    \end{align}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
+
+\message{ !name(../main.tex) !offset(-18) }
+
+\end{document}

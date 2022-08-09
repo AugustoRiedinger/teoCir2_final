@@ -1,0 +1,40 @@
+% *** MISC UTILITY PACKAGES ***
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsthm, amssymb, amsfonts} % Nicer mathematical typesetting
+\usepackage{lipsum} % Creates dummy text lorem ipsum to showcase typsetting
+\usepackage{siunitx}
+\usepackage{nicefrac}
+
+\usepackage{graphicx} % Allows the use of \begin{figure} and \includegraphics
+\usepackage{float} % Useful for specifying the location of a figure ([H] for ex.)
+\usepackage{caption} % Adds additional customization for (figure) captions
+\usepackage{subcaption} % Needed to create sub-figures
+\usepackage{tabularx} % Adds additional customization for tables
+\usepackage{tabu} % Adds additional customization for tables
+\usepackage{booktabs} % For generally nicer looking tables
+\usepackage[nottoc,numbib]{tocbibind} % Automatically adds bibliography to ToC
+\usepackage{hyperref} % Allows links and makes references and the ToC clickable
+\usepackage[noabbrev, capitalise]{cleveref} % Easier referencing using \cref{<label>} instead of \ref{}
+
+\usepackage{xcolor} % Predefines additional colors and allows user defined colors
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi

@@ -1,0 +1,39 @@
+\subsection{Filtros TIIR en modo de magnitud unitaria}
+    Una tercera clase de filtros lineales consiste de respuestas TIIR puras con una longitud $N$ tal que todos sus modos esten sobre el círculo unidad y que cada uno posea multiplicidad $1$. Así, es posible asegurarque $H_{\mu}(z)$ tendrá una fase lineal. Esto se puede observar en un filtro que satisfaga la Ec. \ref{eq:11}. Si no hay modos con multiplicidad mayor a $1$, entonces la Ec. \ref{eq:11} no se satisface. Sin embargo, se pueden plantear cuidadosamente los ceros para forzar a que se cumpla la Ec. \ref{eq:11}.
+
+    Aplicando el análisis de la subsección anterior, se ve a partir de la Ec. \ref{eq:73} que los $N_k$ para este tipo de filtro serán todos infinito. En este caso, no es necesario resetear las variables de estado seguido, ya que el crecimiento en el error de cuantización será aditivo y no exponencial.
+
+    Si se considera el peor escenario, el número de muestras en las cuales el error en el bit de menor significancia (LSB) se puede llegar a acumular antes de alcanzar el piso de significancia $\lambda_s$ es aproximadamente
+
+    \begin{equation}
+      N = \frac{\lambda_S}{\lambda_P}
+    \end{equation}
+
+    asumiendo que hay $1 \: b$ de error en el LSB por muestra procesada. Si la media del ruido no es cero, entonces el error acumulado es aleatorio, significando que el error estándar crece proporcionalmente a la raíz cuadrada del número de muestras procesadas. Se examina entonces el error para que se encuentre a una distancia del LSB. Para un error acumulativo que se encuentra por debajo del piso de significancia se tiene que:
+
+    \begin{equation}
+      3 \lambda_P \sqrt{N} < \lambda_S
+    \end{equation}
+
+    Resultando:
+
+    \begin{equation}
+      N < \left( \frac{\lambda_S}{3 \lambda_P} \right)^2 \simeq \frac{4^G}{10}
+    \end{equation}
+
+    donde $G$ es el número de bits de seguridad. De esta forma, se ve que los filtros TIIR con modos escondidos en el círculo unitario tiene propiedades de estabilidad deseables en comparación con los descritos en las dos secciones anteriores.
+
+    Como la magnitud unitaria de estos filtros TIIR es cuasiestable y no necesita ser reseteada cada $N$ ciclos, el número de computaciones necesarias para estabilizarlos puede ser reducido significantemente. Como un filtro FIR tiene memoria infinita, es suficiente realizar dos filtros en paralelo comenzando con solo $N$ pasos antes de la transferencia de variables de estado.
+
+    La respuesta al impulso de filtros TIIR con magnitud unitaria tiene la forma:
+
+    \begin{equation}
+      h_k[n] = P_k(n) p_k^n = P_k(n) e^{j\omega_k n}
+    \end{equation}
+
+    para $n=0,\ldots , N$, donde $p_k$ es el polo único $k$ y $P_k(n)$ es el polinomio de grado $m_k - 1$ tal que $m_k$ es el múltiplo del polo $k$.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
