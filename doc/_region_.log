@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.11)  9 AUG 2022 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.11)  9 AUG 2022 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -585,33 +585,30 @@ No auxiliary output files.
 
 Preview: Fontsize 10pt
 Preview: PDFoutput 1
-)  !name(sections/02-01-fact-adit.tex) !offset(-11) 
+)  !name(sections/02-04-mag-unit.tex) !offset(-11) 
 ./_region_.tex:12: Preview: Snippet 1 started.
 <-><->
       
 l.12 \subsection
-                {Método de diseño por factorización aditiva}
+                {Filtros TIIR en modo de magnitud unitaria}
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
 ./_region_.tex:12: Preview: Snippet 1 ended.(448587+135328x16515072).
 <-><->
       
-l.12 ...odo de diseño por factorización aditiva}
+l.12 ...Filtros TIIR en modo de magnitud unitaria}
                                                   
 Not a real error.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-
-LaTeX Warning: Reference `eq:11' on page 1 undefined on input line 13.
-
 ./_region_.tex:13: Preview: Snippet 2 started.
 <-><->
       
-l.13 ...ha relación utilizando filtros TIIR. Si $
-                                                  H_{FIR}^{+}$ es una funci�...
+l.13 ...e respuestas TIIR puras con una longitud $
+                                                  N$ tal que todos sus modos...
 Not a real error.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
@@ -622,84 +619,343 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-./_region_.tex:13: Preview: Snippet 2 ended.(564338+192599x1645527).
+./_region_.tex:13: Preview: Snippet 2 ended.(447828+0x598014).
 <-><->
       
-l.13 ... utilizando filtros TIIR. Si $H_{FIR}^{+}$
-                                                   es una función transfere...
+l.13 ...respuestas TIIR puras con una longitud $N$
+                                                   tal que todos sus modos e...
 Not a real error.
 
 [2]
-./_region_.tex:15: Preview: Snippet 3 started.
+./_region_.tex:13: Preview: Snippet 3 started.
 <-><->
       
-l.15     \begin{equation}
+l.13 ...nidad y que cada uno posea multiplicidad $
+                                                  1$. Así, es posible asegu...
+Not a real error.
+
+./_region_.tex:13: Preview: Snippet 3 ended.(422343+0x327681).
+<-><->
+      
+l.13 ...dad y que cada uno posea multiplicidad $1$
+                                                  . Así, es posible asegura...
+Not a real error.
+
+[3]
+./_region_.tex:13: Preview: Snippet 4 started.
+<-><->
+      
+l.13 ...icidad $1$. Así, es posible asegurarque $
+                                                  H_{\mu}(z)$ tendrá una fa...
+Not a real error.
+
+./_region_.tex:13: Preview: Snippet 4 ended.(491520+187504x1739517).
+<-><->
+      
+l.13 ... Así, es posible asegurarque $H_{\mu}(z)$
+                                                   tendrá una fase lineal. ...
+Not a real error.
+
+[4]
+
+LaTeX Warning: Reference `eq:11' on page 1 undefined on input line 13.
+
+./_region_.tex:13: Preview: Snippet 5 started.
+<-><->
+      
+l.13 ...i no hay modos con multiplicidad mayor a $
+                                                  1$, entonces la Ec. \ref{e...
+Not a real error.
+
+./_region_.tex:13: Preview: Snippet 5 ended.(422343+0x327681).
+<-><->
+      
+l.13 ...no hay modos con multiplicidad mayor a $1$
+                                                  , entonces la Ec. \ref{eq:...
+Not a real error.
+
+[5]
+
+LaTeX Warning: Reference `eq:11' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Reference `eq:11' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Reference `eq:73' on page 1 undefined on input line 15.
+
+./_region_.tex:15: Preview: Snippet 6 started.
+<-><->
+      
+l.15 ...e a partir de la Ec. \ref{eq:73} que los $
+                                                  N_k$ para este tipo de fil...
+Not a real error.
+
+./_region_.tex:15: Preview: Snippet 6 ended.(447828+98303x849011).
+<-><->
+      
+l.15 ...partir de la Ec. \ref{eq:73} que los $N_k$
+                                                   para este tipo de filtro ...
+Not a real error.
+
+[6]
+./_region_.tex:17: Preview: Snippet 7 started.
+<-><->
+      
+l.17 ...tes de alcanzar el piso de significancia $
+                                                  \lambda_s$ es aproximadamente
+Not a real error.
+
+./_region_.tex:17: Preview: Snippet 7 ended.(455111+98303x662417).
+<-><->
+      
+l.17 ...anzar el piso de significancia $\lambda_s$
+                                                   es aproximadamente
+Not a real error.
+
+[7]
+./_region_.tex:19: Preview: Snippet 8 started.
+<-><->
+      
+l.19     \begin{equation}
                          
 Not a real error.
 
-./_region_.tex:18: Preview: Snippet 3 ended.(2052011+0x16515072).
+./_region_.tex:21: Preview: Snippet 8 ended.(1446315+0x16515072).
 <-><->
       
-l.18     \end{equation}
+l.21     \end{equation}
                        
 Not a real error.
 
-[3
-
-
-]
-./_region_.tex:22: Preview: Snippet 4 started.
+[8]
+./_region_.tex:23: Preview: Snippet 9 started.
 <-><->
       
-l.22     \begin{align}
-                      
+l.23     asumiendo que hay $
+                            1 \: b$ de error en el LSB por muestra procesada...
 Not a real error.
 
-./_region_.tex:29: Double superscript.
-<recently read> ^
-                 
-l.29     \end{align}
-                    
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-./_region_.tex:29: Double superscript.
-<recently read> ^
-                 
-l.29     \end{align}
-                    
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-./_region_.tex:29: Preview: Snippet 4 ended.(9982037+0x16515072).
+./_region_.tex:23: Preview: Snippet 9 ended.(455111+0x754571).
 <-><->
       
-l.29     \end{align}
-                    
+l.23     asumiendo que hay $1 \: b$
+                                    de error en el LSB por muestra procesada...
 Not a real error.
 
+[9]
+./_region_.tex:25: Preview: Snippet 10 started.
+<-><->
+      
+l.25     \begin{equation}
+                         
+Not a real error.
 
-LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 29.
+./_region_.tex:27: Preview: Snippet 10 ended.(755611+0x16515072).
+<-><->
+      
+l.27     \end{equation}
+                       
+Not a real error.
 
-[4
+[10]
+./_region_.tex:31: Preview: Snippet 11 started.
+<-><->
+      
+l.31     \begin{equation}
+                         
+Not a real error.
 
+./_region_.tex:33: Preview: Snippet 11 ended.(1706501+0x16515072).
+<-><->
+      
+l.33     \end{equation}
+                       
+Not a real error.
 
-]  !name(../main.tex) !offset(-18) 
+[11]
+./_region_.tex:35: Preview: Snippet 12 started.
+<-><->
+      
+l.35     donde $
+                G$ es el número de bits de seguridad. De esta forma, se ve ...
+Not a real error.
+
+./_region_.tex:35: Preview: Snippet 12 ended.(447828+0x515276).
+<-><->
+      
+l.35     donde $G$
+                   es el número de bits de seguridad. De esta forma, se ve ...
+Not a real error.
+
+[12]
+./_region_.tex:37: Preview: Snippet 13 started.
+<-><->
+      
+l.37 ...estable y no necesita ser reseteada cada $
+                                                  N$ ciclos, el número de c...
+Not a real error.
+
+./_region_.tex:37: Preview: Snippet 13 ended.(447828+0x598014).
+<-><->
+      
+l.37 ...table y no necesita ser reseteada cada $N$
+                                                   ciclos, el número de com...
+Not a real error.
+
+[13]
+./_region_.tex:37: Preview: Snippet 14 started.
+<-><->
+      
+l.37 ... filtros en paralelo comenzando con solo $
+                                                  N$ pasos antes de la trans...
+Not a real error.
+
+./_region_.tex:37: Preview: Snippet 14 ended.(447828+0x598014).
+<-><->
+      
+l.37 ...iltros en paralelo comenzando con solo $N$
+                                                   pasos antes de la transfe...
+Not a real error.
+
+[14]
+./_region_.tex:41: Preview: Snippet 15 started.
+<-><->
+      
+l.41     \begin{equation}
+                         
+Not a real error.
+
+./_region_.tex:43: Preview: Snippet 15 ended.(737991+0x16515072).
+<-><->
+      
+l.43     \end{equation}
+                       
+Not a real error.
+
+[15]
+./_region_.tex:45: Preview: Snippet 16 started.
+<-><->
+      
+l.45     para $
+               n=0,\ldots , N$, donde $p_k$ es el polo único $k$ y $P_k(n)$...
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 16 ended.(447828+127431x3649216).
+<-><->
+      
+l.45     para $n=0,\ldots , N$
+                              , donde $p_k$ es el polo único $k$ y $P_k(n)$...
+Not a real error.
+
+[16]
+./_region_.tex:45: Preview: Snippet 17 started.
+<-><->
+      
+l.45     para $n=0,\ldots , N$, donde $
+                                       p_k$ es el polo único $k$ y $P_k(n)$...
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 17 ended.(282168+127431x652176).
+<-><->
+      
+l.45     para $n=0,\ldots , N$, donde $p_k$
+                                            es el polo único $k$ y $P_k(n)$...
+Not a real error.
+
+[17]
+./_region_.tex:45: Preview: Snippet 18 started.
+<-><->
+      
+l.45 ...dots , N$, donde $p_k$ es el polo único $
+                                                  k$ y $P_k(n)$ es el polino...
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 18 ended.(455111+0x361814).
+<-><->
+      
+l.45 ...ts , N$, donde $p_k$ es el polo único $k$
+                                                   y $P_k(n)$ es el polinomi...
+Not a real error.
+
+[18]
+./_region_.tex:45: Preview: Snippet 19 started.
+<-><->
+      
+l.45 ... N$, donde $p_k$ es el polo único $k$ y $
+                                                  P_k(n)$ es el polinomio de...
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 19 ended.(491520+163840x1646294).
+<-><->
+      
+l.45 ...nde $p_k$ es el polo único $k$ y $P_k(n)$
+                                                   es el polinomio de grado ...
+Not a real error.
+
+[19]
+./_region_.tex:45: Preview: Snippet 20 started.
+<-><->
+      
+l.45 ... $k$ y $P_k(n)$ es el polinomio de grado $
+                                                  m_k - 1$ tal que $m_k$ es ...
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 20 ended.(422343+98303x2026534).
+<-><->
+      
+l.45 ...P_k(n)$ es el polinomio de grado $m_k - 1$
+                                                   tal que $m_k$ es el múlt...
+Not a real error.
+
+[20]
+./_region_.tex:45: Preview: Snippet 21 started.
+<-><->
+      
+l.45 ... el polinomio de grado $m_k - 1$ tal que $
+                                                  m_k$ es el múltiplo del p...
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 21 ended.(282168+98303x897863).
+<-><->
+      
+l.45 ...polinomio de grado $m_k - 1$ tal que $m_k$
+                                                   es el múltiplo del polo ...
+Not a real error.
+
+[21]
+./_region_.tex:45: Preview: Snippet 22 started.
+<-><->
+      
+l.45 ...$ tal que $m_k$ es el múltiplo del polo $
+                                                  k$.
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 22 ended.(455111+0x361814).
+<-><->
+      
+l.45 ...tal que $m_k$ es el múltiplo del polo $k$
+                                                  .
+Not a real error.
+
+[22]  !name(../main.tex) !offset(-33) 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 20370 strings out of 478238
- 390306 string characters out of 5850456
+ 20388 strings out of 478238
+ 390447 string characters out of 5850456
  763733 words of memory out of 5000000
- 38377 multiletter control sequences out of 15000+600000
+ 38379 multiletter control sequences out of 15000+600000
  494242 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 78i,14n,80p,562b,811s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on _region_.pdf (4 pages, 90782 bytes).
+ 78i,6n,80p,847b,811s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on _region_.pdf (22 pages, 87853 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
