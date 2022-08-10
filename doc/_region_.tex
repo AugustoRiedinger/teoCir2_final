@@ -8,47 +8,68 @@
 
 \begin{document}
 
-\message{ !name(sections/02-04-mag-unit.tex) !offset(-11) }
-\subsection{Filtros TIIR en modo de magnitud unitaria}
-    Una tercera clase de filtros lineales consiste de respuestas TIIR puras con una longitud $N$ tal que todos sus modos esten sobre el círculo unidad y que cada uno posea multiplicidad $1$. Así, es posible asegurarque $H_{\mu}(z)$ tendrá una fase lineal. Esto se puede observar en un filtro que satisfaga la Ec. \ref{eq:11}. Si no hay modos con multiplicidad mayor a $1$, entonces la Ec. \ref{eq:11} no se satisface. Sin embargo, se pueden plantear cuidadosamente los ceros para forzar a que se cumpla la Ec. \ref{eq:11}.
-
-    Aplicando el análisis de la subsección anterior, se ve a partir de la Ec. \ref{eq:73} que los $N_k$ para este tipo de filtro serán todos infinito. En este caso, no es necesario resetear las variables de estado seguido, ya que el crecimiento en el error de cuantización será aditivo y no exponencial.
-
-    Si se considera el peor escenario, el número de muestras en las cuales el error en el bit de menor significancia (LSB) se puede llegar a acumular antes de alcanzar el piso de significancia $\lambda_s$ es aproximadamente
+\message{ !name(sections/03-00-sim.tex) !offset(-11) }
+\section{Simulaciones y experimentos}
+    En esta sección se realizarán simulaciones y comparaciones entre distintos sistemas. Para demostrar la idea básica de sistema TIIR, se comenzerá examinando el sistema tal que
 
     \begin{equation}
-      N = \frac{\lambda_S}{\lambda_P}
+      H(z) = \frac{z^{2}}{z^{2} - 1.9 \: z + 0.98} = \frac{B^{+}(z)}{A^{+}(z)}
     \end{equation}
 
-    asumiendo que hay $1 \: b$ de error en el LSB por muestra procesada. Si la media del ruido no es cero, entonces el error acumulado es aleatorio, significando que el error estándar crece proporcionalmente a la raíz cuadrada del número de muestras procesadas. Se examina entonces el error para que se encuentre a una distancia del LSB. Para un error acumulativo que se encuentra por debajo del piso de significancia se tiene que:
+    el cual se deseará truncar luego de un $N = 300 \: [\text{muestras}]$ arbitrario; esto es, se desea obtener una respuesta FIR de 301 pasos. Se comienza entonces formando el polinio de cancelación de cola como en la Eq. \ref{eq:25}, realizando división sintética de $z^{N} \: B(z)$  por $A(z)$, lo que resulta en el resto
 
     \begin{equation}
-      3 \lambda_P \sqrt{N} < \lambda_S
+      B^{\prime +}(z) = - 0.162126 \: z + 0.13977
     \end{equation}
 
-    Resultando:
+    De esta manera, se puede definir $H_{FIR}^{+}(z)$ según la Ec. \ref{eq:42}
 
-    \begin{equation}
-      N < \left( \frac{\lambda_S}{3 \lambda_P} \right)^2 \simeq \frac{4^G}{10}
-    \end{equation}
+    \begin{align}
+      H_{FIR}^{+}(z) =& \frac{B(z) - z^{-N} \: B^{\prime + }(z)}{A(z)} \nonumber \\
+      =& \frac{z^{2} + z^{-N} \: \left( - 0.162126 \: z + 0.139977 \right)}{z^{2} - 1.9 \: z + 0.98}
+    \end{align}
 
-    donde $G$ es el número de bits de seguridad. De esta forma, se ve que los filtros TIIR con modos escondidos en el círculo unitario tiene propiedades de estabilidad deseables en comparación con los descritos en las dos secciones anteriores.
+    Entonces, se definen los coeficientes de $H_{FIR}^{+}(z)$  como
 
-    Como la magnitud unitaria de estos filtros TIIR es cuasiestable y no necesita ser reseteada cada $N$ ciclos, el número de computaciones necesarias para estabilizarlos puede ser reducido significantemente. Como un filtro FIR tiene memoria infinita, es suficiente realizar dos filtros en paralelo comenzando con solo $N$ pasos antes de la transferencia de variables de estado.
+    \begin{itemize}
+      \item $a = 0.162126$
+      \item $b = 0.139977$
+      \item $p = 1.9$
+      \item $q = 0.98$
+    \end{itemize}
 
-    La respuesta al impulso de filtros TIIR con magnitud unitaria tiene la forma:
+    Así, se obtiene la FT de forma de llegar a un polinomio con el formato para graficar en GNU Octave
 
-    \begin{equation}
-      h_k[n] = P_k(n) p_k^n = P_k(n) e^{j\omega_k n}
-    \end{equation}
+    \begin{align}
+      H_{FIR}^{+}(z) =& \frac{z + a \: z^{-(N-1)} - b \: z^{-N}}{z^{2} - p \: z + q} \nonumber \\
+      =& \frac{z^{2} + z^{-(N-1)} \: \left(a - b \: z^{-1} \right)}{z^{2} - p \: z + q} \nonumber \\
+      =& \frac{z^{2} + \frac{a - b \: z^{-1}}{z^{N-1}}}{z^{2} - p \: z + q} \nonumber \\
+      =& \frac{z^{N+1} + \left( a - b \: z^{-1} \right)}{z^{N-1} \: \left( z^{2} - p \: z + q \right)}
+    \end{align}
 
-    para $n=0,\ldots , N$, donde $p_k$ es el polo único $k$ y $P_k(n)$ es el polinomio de grado $m_k - 1$ tal que $m_k$ es el múltiplo del polo $k$.
+    Ahora, si se desarrolla el término $b \: z^{-1}$
+
+    \begin{align}
+      H_{FIR}^{+}(z) =& \frac{z^{N+1} + a - \nicefrac{b}{z}}{z^{N-1} \: \left( z^{2} - p \: z + q \right)} \nonumber \\
+      =& \frac{z^{N+2} + a \: z - b}{z^{N} \: \left( z^{2} - p \: z + q \right)} \nonumber \\
+      =& \frac{z^{N+2} + a \: z - b}{z^{N+2} - p \: z^{N+1} + q \: z^{N}}
+      \label{eq:03-00-hfir+}
+    \end{align}
+
+    Queda definida entonces la FT $H_{FIR}^{+}(z)$, y se puede insertar en GNU Octave con el algoritmo que se muestra en XXXX. En la Fig. \ref{fig:03-00-hfir+} se puede observar la respuesta al impulso de la misma.
+
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.52\textwidth]{../images/03-00-hfir+.png}
+      \caption{Respuesta al impulso de $H_{FIR}^{+}$ según la Ec. \ref{eq:03-00-hfir+}}
+      \label{fig:03-00-hfir+}
+    \end{figure}
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"
 %%% End:
 
-\message{ !name(../main.tex) !offset(-33) }
+\message{ !name(../main.tex) !offset(-53) }
 
 \end{document}

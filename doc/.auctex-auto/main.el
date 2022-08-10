@@ -11,6 +11,7 @@
     "sections/00-00-intro"
     "sections/01-00-tiir"
     "sections/02-00-ffir"
+    "sections/03-00-sim"
     "../bib/references"
     "IEEEtran"
     "IEEEtran10"))
