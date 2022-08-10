@@ -56,20 +56,54 @@
       \label{eq:03-00-hfir+}
     \end{align}
 
-    Queda definida entonces la FT $H_{FIR}^{+}(z)$, y se puede insertar en GNU Octave con el algoritmo que se muestra en XXXX. En la Fig. \ref{fig:03-00-hfir+} se puede observar la respuesta al impulso de la misma.
+    Queda definida entonces la FT $H_{FIR}^{+}(z)$, y se puede insertar en GNU Octave con el algoritmo que se muestra en el algoritmo a continuación
+
+    \lstinputlisting[language=Octave]{../code/tiir_hfir1.m}
 
     \begin{figure}
       \centering
       \includegraphics[width=0.52\textwidth]{../images/03-00-hfir+.png}
-      \caption{Respuesta al impulso de $H_{FIR}^{+}$ según la Ec. \ref{eq:03-00-hfir+}}
+      \caption{Respuesta al impulso TIIR de $H_{FIR}^{+}$ según la Ec. \ref{eq:03-00-hfir+}}
       \label{fig:03-00-hfir+}
     \end{figure}
+
+    En la Fig. \ref{fig:03-00-hfir+} se puede observar la respuesta al impulso de $H_{FIR}^{+}(z)$, donde se puede notar que efectivamente, en el paso $n=301$, la cola de la respuesta se ha subtraído.
+
+    A continuación, se forma el sistema reverso conjugado $H_{FIR}^{-}(z)$ como se describe en la Ec. \ref{eq:47}, y se llega a
+
+    \begin{align}
+      H_{FIR}^{-}(z) =& \frac{-z \: B^{\prime -}(z) + z^{-N} \: B^{-}(z)}{A^{-}(z)} \nonumber \\
+      =& \frac{-0.13977 \: z^{2} + 0.162126 \: z - z^{-N}}{0.98 \: z^{2} - 1.9 \: z +1} \nonumber \\
+      =& \frac{-0.142622 \: z^{2} + 0.165435 \: z - 1.0220408 \: z^{-N}}{z^{2} - 1.938776 \: z + 1.020408}
+    \end{align}
+
+    Por lo que se pueden definir los coeficientes de $H_{FIR}^{-}(z)$ como
+
+    \begin{itemize}
+      \item $c = 0.142622$
+      \item $d = 0.165435$
+      \item $e = 1.020408$
+      \item $u = 1.938776$
+      \item $v = 1.020408$
+    \end{itemize}
+
+    Luego, se reescriben los polinomios de $H_{FIR}^{-}(z)$ de forma que sea posible computarla con GNU Octave, al igual que se realizó para $H_{FIR}^{+}(z)$
+
+    \begin{align}
+      H_{FIR}^{-}(z) =& \frac{-c \: z^{2} + d \: z - \nicefrac{e}{z^{N}}}{z^{2} - u \: z + v} \nonumber \\
+      =& \frac{-c \: z^{N+2} + d \: z^{N+1} - e}{z^{N} \: \left( z^{2} - u \: z + v \right)} \nonumber \\
+      =& \frac{-c \: z^{N+2} + d \: z^{N+1} - e}{z^{N+2} - u \: z^{N+1} + v \: z^{N}}
+    \end{align}
+
+    Y se realiza entonces con la misma el algoritmo en GNU Octave como se muestra a continuación
+
+    \lstinputlisting[language=Octave]{../code/tiir_hfir2.m}
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"
 %%% End:
 
-\message{ !name(../main.tex) !offset(-53) }
+\message{ !name(../main.tex) !offset(-87) }
 
 \end{document}

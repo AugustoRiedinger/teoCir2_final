@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=prv_main 2022.8.10)  10 AUG 2022 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=prv_main 2022.8.10)  10 AUG 2022 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -362,31 +362,62 @@ l.59 ...a definida entonces la FT $H_{FIR}^{+}(z)$
 Not a real error.
 
 [17]
+./_region_.tex:61: Undefined control sequence.
+l.61     \lstinputlisting
+                         [language=Octave]{../code/tiir_hfir1.m}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Reference `fig:03-00-hfir+' on page 1 undefined on input line 59.
+./_region_.tex:61: Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...nputlisting[language=Octave]{../code/tiir_
+                                                  hfir1.m}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-./_region_.tex:61: Preview: Snippet 18 started.
+./_region_.tex:61: Extra }, or forgotten $.
+l.61 ...ing[language=Octave]{../code/tiir_hfir1.m}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./_region_.tex:62: Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./_region_.tex:63: Preview: Snippet 18 started.
 <-><->
       
-l.61     \begin{figure}
+l.63     \begin{figure}
                        
 Not a real error.
 
-<../images/03-00-hfir+.png, id=91, 1474.50874pt x 680.5425pt>
+<../images/03-00-hfir+.png, id=91, 1474.50874pt x 1496.59125pt>
 File: ../images/03-00-hfir+.png Graphic file (type png)
 <use ../images/03-00-hfir+.png>
-Package pdftex.def Info: ../images/03-00-hfir+.png  used on input line 63.
-(pdftex.def)             Requested size: 268.3222pt x 123.83192pt.
+Package pdftex.def Info: ../images/03-00-hfir+.png  used on input line 65.
+(pdftex.def)             Requested size: 268.3222pt x 272.32066pt.
 
-LaTeX Warning: Reference `eq:03-00-hfir+' on page 1 undefined on input line 64.
+LaTeX Warning: Reference `eq:03-00-hfir+' on page 1 undefined on input line 66.
 
 
-LaTeX Warning: Reference `eq:03-00-hfir+' on page 1 undefined on input line 64.
+LaTeX Warning: Reference `eq:03-00-hfir+' on page 1 undefined on input line 66.
 
-./_region_.tex:66: Preview: Snippet 18 ended.(9308935+0x16515072).
+./_region_.tex:68: Preview: Snippet 18 ended.(19826725+0x16515072).
 <-><->
       
-l.66     \end{figure}
+l.68     \end{figure}
                      
 Not a real error.
 
@@ -395,24 +426,271 @@ Not a real error.
 
 
 
- <../images/03-00-hfir+.png (PNG copy)>]  !name(../main.tex) !offset(-53) 
+ <../images/03-00-hfir+.png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:03-00-hfir+' on page 1 undefined on input line 70.
+
+./_region_.tex:70: Preview: Snippet 19 started.
+<-><->
+      
+l.70 ...uede observar la respuesta al impulso de $
+                                                  H_{FIR}^{+}(z)$, donde se ...
+Not a real error.
+
+./_region_.tex:70: Preview: Snippet 19 ended.(564338+192599x2488851).
+<-><->
+      
+l.70 ...a respuesta al impulso de $H_{FIR}^{+}(z)$
+                                                  , donde se puede notar que...
+Not a real error.
+
+[19]
+./_region_.tex:70: Preview: Snippet 20 started.
+<-><->
+      
+l.70 ...uede notar que efectivamente, en el paso $
+                                                  n=301$, la cola de la resp...
+Not a real error.
+
+./_region_.tex:70: Preview: Snippet 20 ended.(422343+0x2250219).
+<-><->
+      
+l.70 ...otar que efectivamente, en el paso $n=301$
+                                                  , la cola de la respuesta ...
+Not a real error.
+
+[20]
+./_region_.tex:72: Preview: Snippet 21 started.
+<-><->
+      
+l.72 ...n, se forma el sistema reverso conjugado $
+                                                  H_{FIR}^{-}(z)$ como se de...
+Not a real error.
+
+./_region_.tex:72: Preview: Snippet 21 ended.(564338+192599x2488851).
+<-><->
+      
+l.72 ...sistema reverso conjugado $H_{FIR}^{-}(z)$
+                                                   como se describe en la Ec...
+Not a real error.
+
+[21]
+
+LaTeX Warning: Reference `eq:47' on page 1 undefined on input line 72.
+
+./_region_.tex:74: Preview: Snippet 22 started.
+<-><->
+      
+l.74     \begin{align}
+                      
+Not a real error.
+
+./_region_.tex:78: Preview: Snippet 22 ended.(5930971+0x16515072).
+<-><->
+      
+l.78     \end{align}
+                    
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 78.
+
+[22]
+./_region_.tex:80: Preview: Snippet 23 started.
+<-><->
+      
+l.80 ...ue se pueden definir los coeficientes de $
+                                                  H_{FIR}^{-}(z)$ como
+Not a real error.
+
+./_region_.tex:80: Preview: Snippet 23 ended.(564338+192599x2488851).
+<-><->
+      
+l.80 ...finir los coeficientes de $H_{FIR}^{-}(z)$
+                                                   como
+Not a real error.
+
+[23]
+./_region_.tex:83: Preview: Snippet 24 started.
+<-><->
+      
+l.83       \item $
+                  c = 0.142622$
+Not a real error.
+
+./_region_.tex:83: Preview: Snippet 24 ended.(422343+127431x3633229).
+<-><->
+      
+l.83       \item $c = 0.142622$
+                               
+Not a real error.
+
+[24]
+./_region_.tex:84: Preview: Snippet 25 started.
+<-><->
+      
+l.84       \item $
+                  d = 0.165435$
+Not a real error.
+
+./_region_.tex:84: Preview: Snippet 25 ended.(455111+127431x3690724).
+<-><->
+      
+l.84       \item $d = 0.165435$
+                               
+Not a real error.
+
+[25]
+./_region_.tex:85: Preview: Snippet 26 started.
+<-><->
+      
+l.85       \item $
+                  e = 1.020408$
+Not a real error.
+
+./_region_.tex:85: Preview: Snippet 26 ended.(422343+127431x3654771).
+<-><->
+      
+l.85       \item $e = 1.020408$
+                               
+Not a real error.
+
+[26]
+./_region_.tex:86: Preview: Snippet 27 started.
+<-><->
+      
+l.86       \item $
+                  u = 1.938776$
+Not a real error.
+
+./_region_.tex:86: Preview: Snippet 27 ended.(422343+127431x3724784).
+<-><->
+      
+l.86       \item $u = 1.938776$
+                               
+Not a real error.
+
+[27]
+./_region_.tex:87: Preview: Snippet 28 started.
+<-><->
+      
+l.87       \item $
+                  v = 1.020408$
+Not a real error.
+
+./_region_.tex:87: Preview: Snippet 28 ended.(422343+127431x3690799).
+<-><->
+      
+l.87       \item $v = 1.020408$
+                               
+Not a real error.
+
+[28]
+./_region_.tex:90: Preview: Snippet 29 started.
+<-><->
+      
+l.90     Luego, se reescriben los polinomios de $
+                                                 H_{FIR}^{-}(z)$ de forma qu...
+Not a real error.
+
+./_region_.tex:90: Preview: Snippet 29 ended.(564338+192599x2488851).
+<-><->
+      
+l.90 ...scriben los polinomios de $H_{FIR}^{-}(z)$
+                                                   de forma que sea posible ...
+Not a real error.
+
+[29]
+./_region_.tex:90: Preview: Snippet 30 started.
+<-><->
+      
+l.90 ...NU Octave, al igual que se realizó para $
+                                                  H_{FIR}^{+}(z)$
+Not a real error.
+
+./_region_.tex:90: Preview: Snippet 30 ended.(564338+192599x2488851).
+<-><->
+      
+l.90 ...gual que se realizó para $H_{FIR}^{+}(z)$
+                                                  
+Not a real error.
+
+[30]
+./_region_.tex:92: Preview: Snippet 31 started.
+<-><->
+      
+l.92     \begin{align}
+                      
+Not a real error.
+
+./_region_.tex:96: Preview: Snippet 31 ended.(4981062+0x16515072).
+<-><->
+      
+l.96     \end{align}
+                    
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 96.
+
+[31]
+./_region_.tex:100: Undefined control sequence.
+l.100     \lstinputlisting
+                          [language=Octave]{../code/tiir_hfir2.m}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./_region_.tex:100: Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...putlisting[language=Octave]{../code/tiir_
+                                                  hfir2.m}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./_region_.tex:100: Extra }, or forgotten $.
+l.100 ...ng[language=Octave]{../code/tiir_hfir2.m}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./_region_.tex:101: Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+ !name(../main.tex) !offset(-87) 
 
 LaTeX Warning: There were undefined references.
 
- ) 
+ )
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 100 ({)
+### simple group (level 1) entered at line 61 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 2304 strings out of 460010
- 58167 string characters out of 5515874
- 764084 words of memory out of 5000000
- 38498 multiletter control sequences out of 15000+600000
+ 2321 strings out of 460010
+ 58304 string characters out of 5515874
+ 766084 words of memory out of 5000000
+ 38500 multiletter control sequences out of 15000+600000
  496759 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 50i,14n,56p,406b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,14n,56p,406b,891s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on _region_.pdf (18 pages, 128371 bytes).
+Output written on _region_.pdf (31 pages, 153176 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
