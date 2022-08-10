@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=prv_main 2022.8.10)  10 AUG 2022 13:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=prv_main 2022.8.10)  10 AUG 2022 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -85,684 +85,165 @@ No auxiliary output files.
 
 Preview: Fontsize 10pt
 Preview: PDFoutput 1
-)  !name(sections/03-00-sim.tex) !offset(-11) 
+)  !name(sections/03-01-ellip.tex) !offset(-11) 
 ./_region_.tex:12: Preview: Snippet 1 started.
 <-><->
       
-l.12 \section
-             {Simulaciones y experimentos}
+l.12 \subsection
+                {Diseño de un filtro elíptico FFIR}
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
-./_region_.tex:12: Preview: Snippet 1 ended.(444988+8188x16515072).
+./_region_.tex:12: Preview: Snippet 1 ended.(448587+135328x16515072).
 <-><->
       
-l.12 \section{Simulaciones y experimentos}
-                                          
+l.12 ...ction{Diseño de un filtro elíptico FFIR}
+                                                  
 Not a real error.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-./_region_.tex:15: Preview: Snippet 2 started.
+
+LaTeX Warning: Reference `sec:02-02-mag-cuad' on page 1 undefined on input line 13.
+
+./_region_.tex:16: Preview: Snippet 2 started.
 <-><->
       
-l.15     \begin{equation}
-                         
+l.16       \item Banda de paso normalizada $
+                                            (0.00,0.10)$ en fracciones de $\...
 Not a real error.
 
-./_region_.tex:17: Preview: Snippet 2 ended.(1590206+0x16515072).
+./_region_.tex:16: Preview: Snippet 2 ended.(491520+163840x3131171).
 <-><->
       
-l.17     \end{equation}
-                       
+l.16 ...em Banda de paso normalizada $(0.00,0.10)$
+                                                   en fracciones de $\nicefr...
 Not a real error.
 
 [2]
-./_region_.tex:19: Preview: Snippet 3 started.
+./_region_.tex:16: Preview: Snippet 3 started.
 <-><->
       
-l.19     el cual se deseará truncar luego de un $
-                                                  N = 300 \: [\text{muestras...
+l.16 ...rmalizada $(0.00,0.10)$ en fracciones de $
+                                                  \nicefrac{f_{s}}{2}$ con a...
 Not a real error.
 
-./_region_.tex:19: Preview: Snippet 3 ended.(491520+163840x5294351).
+./_region_.tex:16: Preview: Snippet 3 ended.(491520+163840x987601).
 <-><->
       
-l.19 ...luego de un $N = 300 \: [\text{muestras}]$
-                                                   arbitrario; esto es, se d...
+l.16 ...0)$ en fracciones de $\nicefrac{f_{s}}{2}$
+                                                   con al menos $0.08 \: [\u...
 Not a real error.
 
 [3]
-
-LaTeX Warning: Reference `eq:25' on page 1 undefined on input line 19.
-
-./_region_.tex:19: Preview: Snippet 4 started.
+./_region_.tex:16: Preview: Snippet 4 started.
 <-><->
       
-l.19 ...:25}, realizando división sintética de $
-                                                  z^{N} \: B(z)$  por $A(z)$...
+l.16 ...es de $\nicefrac{f_{s}}{2}$ con al menos $
+                                                  0.08 \: [\unit{dB}]$ de ri...
 Not a real error.
 
-./_region_.tex:19: Preview: Snippet 4 ended.(551306+163840x2349604).
+./_region_.tex:16: Preview: Snippet 4 ended.(491520+163840x2503115).
 <-><->
       
-l.19 ...do división sintética de $z^{N} \: B(z)$
-                                                    por $A(z)$, lo que resul...
+l.16 ...s}}{2}$ con al menos $0.08 \: [\unit{dB}]$
+                                                   de ripple máximo pico-a-...
 Not a real error.
 
 [4]
-./_region_.tex:19: Preview: Snippet 5 started.
+./_region_.tex:16: Preview: Snippet 5 started.
 <-><->
       
-l.19 ...sión sintética de $z^{N} \: B(z)$  por $
-                                                  A(z)$, lo que resulta en e...
+l.16 ...}]$ de ripple máximo pico-a-pico, donde $
+                                                  f_{s}$ se define como la f...
 Not a real error.
 
-./_region_.tex:19: Preview: Snippet 5 ended.(491520+163840x1334845).
+./_region_.tex:16: Preview: Snippet 5 ended.(455111+127431x600977).
 <-><->
       
-l.19 ... sintética de $z^{N} \: B(z)$  por $A(z)$
-                                                  , lo que resulta en el resto
+l.16 ... ripple máximo pico-a-pico, donde $f_{s}$
+                                                   se define como la frecuen...
 Not a real error.
 
 [5]
-./_region_.tex:21: Preview: Snippet 6 started.
+./_region_.tex:17: Preview: Snippet 6 started.
 <-><->
       
-l.21     \begin{equation}
-                         
+l.17       \item Banda de parada normalzada $
+                                             (0.11,1.00)$ con al menos $50 \...
 Not a real error.
 
-./_region_.tex:23: Preview: Snippet 6 ended.(718423+0x16515072).
+./_region_.tex:17: Preview: Snippet 6 ended.(491520+163840x3131171).
 <-><->
       
-l.23     \end{equation}
-                       
+l.17 ...m Banda de parada normalzada $(0.11,1.00)$
+                                                   con al menos $50 \: [\uni...
 Not a real error.
 
 [6]
-./_region_.tex:25: Preview: Snippet 7 started.
+./_region_.tex:17: Preview: Snippet 7 started.
 <-><->
       
-l.25     De esta manera, se puede definir $
-                                           H_{FIR}^{+}(z)$ según la Ec. \re...
+l.17 ...da normalzada $(0.11,1.00)$ con al menos $
+                                                  50 \: [\unit{dB}]$ de aten...
 Not a real error.
 
-./_region_.tex:25: Preview: Snippet 7 ended.(564338+192599x2488851).
+./_region_.tex:17: Preview: Snippet 7 ended.(491520+163840x1993389).
 <-><->
       
-l.25 ... manera, se puede definir $H_{FIR}^{+}(z)$
-                                                   según la Ec. \ref{eq:42}
+l.17 ...11,1.00)$ con al menos $50 \: [\unit{dB}]$
+                                                   de atenuación.
 Not a real error.
 
 [7]
-
-LaTeX Warning: Reference `eq:42' on page 1 undefined on input line 25.
-
-./_region_.tex:27: Preview: Snippet 8 started.
+./_region_.tex:19: Preview: Snippet 8 started.
 <-><->
       
-l.27     \begin{align}
-                      
+l.19       \item Amplitud máxima de $
+                                      \mu = 1.0$.
 Not a real error.
 
-./_region_.tex:30: Preview: Snippet 8 ended.(3376293+0x16515072).
+./_region_.tex:19: Preview: Snippet 8 ended.(422343+127431x2106099).
 <-><->
       
-l.30     \end{align}
-                    
+l.19       \item Amplitud máxima de $\mu = 1.0$
+                                                .
 Not a real error.
-
-
-LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 30.
 
 [8]
-./_region_.tex:32: Preview: Snippet 9 started.
+./_region_.tex:22: Preview: Snippet 9 started.
 <-><->
       
-l.32 ...Entonces, se definen los coeficientes de $
-                                                  H_{FIR}^{+}(z)$  como
+l.22 ...a de transición angosta en el intervalo $
+                                                  (0.10,0.11)$, se seleccion...
 Not a real error.
 
-./_region_.tex:32: Preview: Snippet 9 ended.(564338+192599x2488851).
+./_region_.tex:22: Preview: Snippet 9 ended.(491520+163840x3131171).
 <-><->
       
-l.32 ...finen los coeficientes de $H_{FIR}^{+}(z)$
-                                                    como
+l.22 ...ión angosta en el intervalo $(0.10,0.11)$
+                                                  , se selecciona un filtro ...
 Not a real error.
 
-[9]
-./_region_.tex:35: Preview: Snippet 10 started.
-<-><->
-      
-l.35       \item $
-                  a = 0.162126$
-Not a real error.
-
-./_region_.tex:35: Preview: Snippet 10 ended.(422343+127431x3696034).
-<-><->
-      
-l.35       \item $a = 0.162126$
-                               
-Not a real error.
-
-[10]
-./_region_.tex:36: Preview: Snippet 11 started.
-<-><->
-      
-l.36       \item $
-                  b = 0.139977$
-Not a real error.
-
-./_region_.tex:36: Preview: Snippet 11 ended.(455111+127431x3630876).
-<-><->
-      
-l.36       \item $b = 0.139977$
-                               
-Not a real error.
-
-[11]
-./_region_.tex:37: Preview: Snippet 12 started.
-<-><->
-      
-l.37       \item $
-                  p = 1.9$
-Not a real error.
-
-./_region_.tex:37: Preview: Snippet 12 ended.(422343+127431x2040941).
-<-><->
-      
-l.37       \item $p = 1.9$
-                          
-Not a real error.
-
-[12]
-./_region_.tex:38: Preview: Snippet 13 started.
-<-><->
-      
-l.38       \item $
-                  q = 0.98$
-Not a real error.
-
-./_region_.tex:38: Preview: Snippet 13 ended.(422343+127431x2354968).
-<-><->
-      
-l.38       \item $q = 0.98$
-                           
-Not a real error.
-
-[13]
-./_region_.tex:43: Preview: Snippet 14 started.
-<-><->
-      
-l.43     \begin{align}
-                      
-Not a real error.
-
-./_region_.tex:48: Preview: Snippet 14 ended.(7228579+0x16515072).
-<-><->
-      
-l.48     \end{align}
-                    
-Not a real error.
-
-
-LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 48.
-
-[14]
-./_region_.tex:50: Preview: Snippet 15 started.
-<-><->
-      
-l.50     Ahora, si se desarrolla el término $
-                                              b \: z^{-1}$
-Not a real error.
-
-./_region_.tex:50: Preview: Snippet 15 ended.(533465+0x1464092).
-<-><->
-      
-l.50 ...si se desarrolla el término $b \: z^{-1}$
-                                                  
-Not a real error.
-
-[15]
-./_region_.tex:52: Preview: Snippet 16 started.
-<-><->
-      
-l.52     \begin{align}
-                      
-Not a real error.
-
-./_region_.tex:57: Preview: Snippet 16 ended.(5180948+0x16515072).
-<-><->
-      
-l.57     \end{align}
-                    
-Not a real error.
-
-
-LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 57.
-
-[16
-
-
-]
-./_region_.tex:59: Preview: Snippet 17 started.
-<-><->
-      
-l.59     Queda definida entonces la FT $
-                                        H_{FIR}^{+}(z)$, y se puede insertar...
-Not a real error.
-
-./_region_.tex:59: Preview: Snippet 17 ended.(564338+192599x2488851).
-<-><->
-      
-l.59 ...a definida entonces la FT $H_{FIR}^{+}(z)$
-                                                  , y se puede insertar en G...
-Not a real error.
-
-[17]
-./_region_.tex:61: Undefined control sequence.
-l.61     \lstinputlisting
-                         [language=Octave]{../code/tiir_hfir1.m}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./_region_.tex:61: Missing $ inserted.
-<inserted text> 
-                $
-l.61 ...nputlisting[language=Octave]{../code/tiir_
-                                                  hfir1.m}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./_region_.tex:61: Extra }, or forgotten $.
-l.61 ...ing[language=Octave]{../code/tiir_hfir1.m}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./_region_.tex:62: Missing $ inserted.
-<inserted text> 
-                $
-l.62 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./_region_.tex:63: Preview: Snippet 18 started.
-<-><->
-      
-l.63     \begin{figure}
-                       
-Not a real error.
-
-<../images/03-00-hfir+.png, id=91, 1474.50874pt x 1496.59125pt>
-File: ../images/03-00-hfir+.png Graphic file (type png)
-<use ../images/03-00-hfir+.png>
-Package pdftex.def Info: ../images/03-00-hfir+.png  used on input line 65.
-(pdftex.def)             Requested size: 268.3222pt x 272.32066pt.
-
-LaTeX Warning: Reference `eq:03-00-hfir+' on page 1 undefined on input line 66.
-
-
-LaTeX Warning: Reference `eq:03-00-hfir+' on page 1 undefined on input line 66.
-
-./_region_.tex:68: Preview: Snippet 18 ended.(19826725+0x16515072).
-<-><->
-      
-l.68     \end{figure}
-                     
-Not a real error.
-
-[18
-
-
-
-
- <../images/03-00-hfir+.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:03-00-hfir+' on page 1 undefined on input line 70.
-
-./_region_.tex:70: Preview: Snippet 19 started.
-<-><->
-      
-l.70 ...uede observar la respuesta al impulso de $
-                                                  H_{FIR}^{+}(z)$, donde se ...
-Not a real error.
-
-./_region_.tex:70: Preview: Snippet 19 ended.(564338+192599x2488851).
-<-><->
-      
-l.70 ...a respuesta al impulso de $H_{FIR}^{+}(z)$
-                                                  , donde se puede notar que...
-Not a real error.
-
-[19]
-./_region_.tex:70: Preview: Snippet 20 started.
-<-><->
-      
-l.70 ...uede notar que efectivamente, en el paso $
-                                                  n=301$, la cola de la resp...
-Not a real error.
-
-./_region_.tex:70: Preview: Snippet 20 ended.(422343+0x2250219).
-<-><->
-      
-l.70 ...otar que efectivamente, en el paso $n=301$
-                                                  , la cola de la respuesta ...
-Not a real error.
-
-[20]
-./_region_.tex:72: Preview: Snippet 21 started.
-<-><->
-      
-l.72 ...n, se forma el sistema reverso conjugado $
-                                                  H_{FIR}^{-}(z)$ como se de...
-Not a real error.
-
-./_region_.tex:72: Preview: Snippet 21 ended.(564338+192599x2488851).
-<-><->
-      
-l.72 ...sistema reverso conjugado $H_{FIR}^{-}(z)$
-                                                   como se describe en la Ec...
-Not a real error.
-
-[21]
-
-LaTeX Warning: Reference `eq:47' on page 1 undefined on input line 72.
-
-./_region_.tex:74: Preview: Snippet 22 started.
-<-><->
-      
-l.74     \begin{align}
-                      
-Not a real error.
-
-./_region_.tex:78: Preview: Snippet 22 ended.(5930971+0x16515072).
-<-><->
-      
-l.78     \end{align}
-                    
-Not a real error.
-
-
-LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 78.
-
-[22]
-./_region_.tex:80: Preview: Snippet 23 started.
-<-><->
-      
-l.80 ...ue se pueden definir los coeficientes de $
-                                                  H_{FIR}^{-}(z)$ como
-Not a real error.
-
-./_region_.tex:80: Preview: Snippet 23 ended.(564338+192599x2488851).
-<-><->
-      
-l.80 ...finir los coeficientes de $H_{FIR}^{-}(z)$
-                                                   como
-Not a real error.
-
-[23]
-./_region_.tex:83: Preview: Snippet 24 started.
-<-><->
-      
-l.83       \item $
-                  c = 0.142622$
-Not a real error.
-
-./_region_.tex:83: Preview: Snippet 24 ended.(422343+127431x3633229).
-<-><->
-      
-l.83       \item $c = 0.142622$
-                               
-Not a real error.
-
-[24]
-./_region_.tex:84: Preview: Snippet 25 started.
-<-><->
-      
-l.84       \item $
-                  d = 0.165435$
-Not a real error.
-
-./_region_.tex:84: Preview: Snippet 25 ended.(455111+127431x3690724).
-<-><->
-      
-l.84       \item $d = 0.165435$
-                               
-Not a real error.
-
-[25]
-./_region_.tex:85: Preview: Snippet 26 started.
-<-><->
-      
-l.85       \item $
-                  e = 1.020408$
-Not a real error.
-
-./_region_.tex:85: Preview: Snippet 26 ended.(422343+127431x3654771).
-<-><->
-      
-l.85       \item $e = 1.020408$
-                               
-Not a real error.
-
-[26]
-./_region_.tex:86: Preview: Snippet 27 started.
-<-><->
-      
-l.86       \item $
-                  u = 1.938776$
-Not a real error.
-
-./_region_.tex:86: Preview: Snippet 27 ended.(422343+127431x3724784).
-<-><->
-      
-l.86       \item $u = 1.938776$
-                               
-Not a real error.
-
-[27]
-./_region_.tex:87: Preview: Snippet 28 started.
-<-><->
-      
-l.87       \item $
-                  v = 1.020408$
-Not a real error.
-
-./_region_.tex:87: Preview: Snippet 28 ended.(422343+127431x3690799).
-<-><->
-      
-l.87       \item $v = 1.020408$
-                               
-Not a real error.
-
-[28]
-./_region_.tex:90: Preview: Snippet 29 started.
-<-><->
-      
-l.90     Luego, se reescriben los polinomios de $
-                                                 H_{FIR}^{-}(z)$ de forma qu...
-Not a real error.
-
-./_region_.tex:90: Preview: Snippet 29 ended.(564338+192599x2488851).
-<-><->
-      
-l.90 ...scriben los polinomios de $H_{FIR}^{-}(z)$
-                                                   de forma que sea posible ...
-Not a real error.
-
-[29]
-./_region_.tex:90: Preview: Snippet 30 started.
-<-><->
-      
-l.90 ...NU Octave, al igual que se realizó para $
-                                                  H_{FIR}^{+}(z)$
-Not a real error.
-
-./_region_.tex:90: Preview: Snippet 30 ended.(564338+192599x2488851).
-<-><->
-      
-l.90 ...gual que se realizó para $H_{FIR}^{+}(z)$
-                                                  
-Not a real error.
-
-[30]
-./_region_.tex:92: Preview: Snippet 31 started.
-<-><->
-      
-l.92     \begin{align}
-                      
-Not a real error.
-
-./_region_.tex:97: Preview: Snippet 31 ended.(4981062+0x16515072).
-<-><->
-      
-l.97     \end{align}
-                    
-Not a real error.
-
-
-LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 97.
-
-[31
-
-
-]
-./_region_.tex:101: Undefined control sequence.
-l.101     \lstinputlisting
-                          [language=Octave]{../code/tiir_hfir2.m}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./_region_.tex:101: Missing $ inserted.
-<inserted text> 
-                $
-l.101 ...putlisting[language=Octave]{../code/tiir_
-                                                  hfir2.m}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./_region_.tex:101: Extra }, or forgotten $.
-l.101 ...ng[language=Octave]{../code/tiir_hfir2.m}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./_region_.tex:102: Missing $ inserted.
-<inserted text> 
-                $
-l.102 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./_region_.tex:103: Preview: Snippet 32 started.
-<-><->
-      
-l.103     \begin{figure}
-                        
-Not a real error.
-
-<../images/tiir_hfir2.png, id=155, 1474.50874pt x 1496.59125pt>
-File: ../images/tiir_hfir2.png Graphic file (type png)
-<use ../images/tiir_hfir2.png>
-Package pdftex.def Info: ../images/tiir_hfir2.png  used on input line 105.
-(pdftex.def)             Requested size: 258.0pt x 261.86172pt.
-
-LaTeX Warning: Command \' invalid in math mode on input line 106.
-
-./_region_.tex:106: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.106 ...^{-} según la Ec. \ref{eq:03-00-hfir-}$}
-                                                  
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Reference `eq:03-00-hfir-' on page 1 undefined on input line 106.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 106.
-
-./_region_.tex:106: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.106 ...^{-} según la Ec. \ref{eq:03-00-hfir-}$}
-                                                  
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Reference `eq:03-00-hfir-' on page 1 undefined on input line 106.
-
-./_region_.tex:108: Preview: Snippet 32 ended.(18354856+0x16515072).
-<-><->
-      
-l.108     \end{figure}
-                      
-Not a real error.
-
-[32
-
-
-
- <../images/tiir_hfir2.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:tiir_hfir2' on page 1 undefined on input line 110.
-
-./_region_.tex:110: Preview: Snippet 33 started.
-<-><->
-      
-l.110 ...s inestables. Se nota que, al igual que $
-                                                  H_{FIR}^{+}(z)$, la cola s...
-Not a real error.
-
-./_region_.tex:110: Preview: Snippet 33 ended.(564338+192599x2488851).
-<-><->
-      
-l.110 ...e nota que, al igual que $H_{FIR}^{+}(z)$
-                                                  , la cola se cancela, pero...
-Not a real error.
-
-[33]  !name(../main.tex) !offset(-97) 
+[9]  !name(../main.tex) !offset(-11) 
 
 LaTeX Warning: There were undefined references.
 
- )
-(\end occurred inside a group at level 2)
-
-### simple group (level 2) entered at line 101 ({)
-### simple group (level 1) entered at line 61 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 2334 strings out of 460010
- 58565 string characters out of 5515874
- 767084 words of memory out of 5000000
- 38510 multiletter control sequences out of 15000+600000
- 496759 words of font info for 82 fonts, out of 8000000 for 9000
+ 2267 strings out of 460010
+ 57660 string characters out of 5515874
+ 760084 words of memory out of 5000000
+ 38481 multiletter control sequences out of 15000+600000
+ 493986 words of font info for 79 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 50i,14n,56p,406b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on _region_.pdf (33 pages, 194171 bytes).
+ 50i,8n,56p,339b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on _region_.pdf (9 pages, 57276 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 80 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

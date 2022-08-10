@@ -1,0 +1,36 @@
+\subsection{Diseño de un filtro elíptico FFIR}
+    Se ilustrará a continuación un filtro pasa-bajos de fase lineal FFIR utilizando la técnica de diseño de magnitud cuadarada como se desarrolló en la Sec. \ref{sec:02-02-mag-cuad}. Entonces, se deseará que el filtro cumpla con los siguientes criterios de diseño
+
+    \begin{enumerate}
+      \item Banda de paso normalizada $(0.00,0.10)$ en fracciones de $\nicefrac{f_{s}}{2}$ con al menos $0.08 \: [\unit{dB}]$ de ripple máximo pico-a-pico, donde $f_{s}$ se define como la frecuencia de muestreo.
+      \item Banda de parada normalzada $(0.11,1.00)$ con al menos $50 \: [\unit{dB}]$ de atenuación.
+      \item Fase lineal.
+      \item Amplitud máxima de $\mu = 1.0$.
+    \end{enumerate}
+
+    Debido a la banda de transición angosta en el intervalo $(0.10,0.11)$, se selecciona un filtro elíptico como la base del diseño. Luego, 3) será irrelevante ya que un filtro FIR basado en la metodología TIIR (FFIR) tendrá las características intrínsecas de fase lineal. De esta forma, como se verá en el algoritmo que se muestra al final de esta sección, se pueden ingresar los parámetros del filtro en GNU Octave y mediante la función \lstinline|ellip| se obtendrán los coefientes del filtro que se muestran a continuación
+
+    \begin{itemize}
+      \item $a_{0} = 1.0000$
+      \item $a_{1} = -5.2007$
+      \item $a_{2} = 11.4639$
+      \item $a_{3} = -13.6841$
+      \item $a_{4} = 9.3190$
+      \item $a_{5} = -3.4305$
+      \item $a_{6} = 0.5332$
+    \end{itemize}
+
+    \begin{itemize}
+      \item $b_{0} = 0.051513$
+      \item $b_{1} = -0.257151$
+      \item $b_{2} = 0.576634$
+      \item $b_{3} = -0.741252$
+      \item $b_{4} = 0.576634$
+      \item $b_{5} = -0.257151$
+      \item $b_{6} = 0.051513$
+    \end{itemize}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
