@@ -1,4 +1,4 @@
-#+TITLE: Diseño de filtros digitales TIIR basados en el microcontrolador STM32F429ZI
+#+TITLE: Diseño de filtros digitales TIIR
 #+AUTHOR: A. Riedinger.
 #+EMAIL: ariedinger4@duck.com
 

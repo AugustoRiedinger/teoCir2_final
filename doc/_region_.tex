@@ -93,17 +93,27 @@
       H_{FIR}^{-}(z) =& \frac{-c \: z^{2} + d \: z - \nicefrac{e}{z^{N}}}{z^{2} - u \: z + v} \nonumber \\
       =& \frac{-c \: z^{N+2} + d \: z^{N+1} - e}{z^{N} \: \left( z^{2} - u \: z + v \right)} \nonumber \\
       =& \frac{-c \: z^{N+2} + d \: z^{N+1} - e}{z^{N+2} - u \: z^{N+1} + v \: z^{N}}
+      \label{eq:03-00-hfir-}
     \end{align}
 
     Y se realiza entonces con la misma el algoritmo en GNU Octave como se muestra a continuación
 
     \lstinputlisting[language=Octave]{../code/tiir_hfir2.m}
 
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.5\textwidth]{../images/tiir_hfir2.png}
+      \caption{Respuesta al impulso TIIR de $H_{FIR}^{-} según la Ec. \ref{eq:03-00-hfir-}$}
+      \label{fig:tiir_hfir2}
+    \end{figure}
+
+    Entonces, como se puede observar en la Fig. \ref{fig:tiir_hfir2}, el sistema posee modos ocultos inestables. Se nota que, al igual que $H_{FIR}^{+}(z)$, la cola se cancela, pero sin embargo aquí el ruido de cuantización es tan grande que eventualmente abruma a la señal.
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../main"
 %%% End:
 
-\message{ !name(../main.tex) !offset(-87) }
+\message{ !name(../main.tex) !offset(-97) }
 
 \end{document}
