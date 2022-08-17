@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=prv_main 2022.8.10)  10 AUG 2022 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=prv_main 2022.8.17)  17 AUG 2022 14:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,44 +6,85 @@ entering extended mode
 **&prv_main /AUCTEXINPUT{ _region_.tex }
 (./_region_.tex
 No file _region_.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 -- Lines per column: 58 (exact).
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
 (/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 9.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 8.
+ (/usr/share/texmf-dist/tex/latex/sttools/flushend.sty
+Package: flushend 2021/10/04 v4.0 Balancing columns in twocolumn mode
+\flushend@@lastskip@a=\skip64
+\flushend@@lastskip@b=\skip65
+\flushend@@lastnode=\count330
+\var@@loop@iter=\count331
+\var@@temp@spread=\dimen282
+\var@@temp@a=\dimen283
+\var@@temp@loop=\dimen284
+\flushend@@page@rule=\dimen285
+\flushend@@varbox@lastpage=\box73
+\flushend@@varbox@a=\box74
+\flushend@@varbox@c=\box75
+\flushend@@tempbox@a=\box76
+\flushend@@tempbox@c=\box77
+\flushend@@floatbox=\box78
+\@viper=\box79
+\hold@viper=\box80
+\atColsBreak=\toks37
+\atColsEnd=\toks38
+\oldbreak@skip=\dimen286
+) (/usr/share/texmf-dist/tex/latex/sttools/cuted.sty
+Package: cuted 2021/10/04 v2.0 Mixing onecolumn and twocolumn modes
+\At@ViperColsBreak=\toks39
+\preCutedStrip=\toks40
+\postCutedStrip=\toks41
+\cuted@@tempbox@a=\box81
+\cuted@@tempbox@c=\box82
+\cuted@@tempbox@var=\box83
+\cuted@@varbox@a=\box84
+\cuted@@varbox@c=\box85
+\cuted@@tempdim@spread=\dimen287
+\cuted@@tempdim@a=\dimen288
+\cuted@@tempdim@b=\dimen289
+\ht@hold@viper=\dimen290
+\ht@viper=\dimen291
+\var@@pagediscards@ht=\dimen292
+\stripsep=\skip66
+\viper@penalty=\count332
+)
+\@parindent=\skip67
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
-\scratchdimen=\dimen278
-\scratchbox=\box71
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count325
-\MPscratchDim=\dimen279
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count333
+\scratchdimen=\dimen293
+\scratchbox=\box86
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count336
+\MPscratchDim=\dimen294
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -52,8 +93,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 9.
+Package hyperref Info: Link coloring OFF on input line 8.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -61,43 +103,44 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count328
+\c@section@level=\count339
 )
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \ref on input line 8.
+LaTeX Info: Redefining \pageref on input line 8.
+LaTeX Info: Redefining \nameref on input line 8.
+\c@lstlisting=\count340
  (/home/ariedinger/.emacs.d/.local/straight/build-28.1/auctex/latex/preview.sty
 Package: preview 2017/04/24 13.1 (AUCTeX/preview-latex)
  (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
 ) (/home/ariedinger/.emacs.d/.local/straight/build-28.1/auctex/latex/prtightpage.def
-\PreviewBorder=\dimen280
+\PreviewBorder=\dimen295
 ) (/home/ariedinger/.emacs.d/.local/straight/build-28.1/auctex/latex/prauctex.def
 No auxiliary output files.
 
 
-\hbadness=\count329
-\hfuzz=\dimen281
+\hbadness=\count341
+\hfuzz=\dimen296
 (/home/ariedinger/.emacs.d/.local/straight/build-28.1/auctex/latex/prauctex.cfg)) (/home/ariedinger/.emacs.d/.local/straight/build-28.1/auctex/latex/prfootnotes.def)
-\pr@snippet=\count330
-\pr@box=\box72
-\pr@output=\toks38
+\pr@snippet=\count342
+\pr@box=\box87
+\pr@output=\toks44
 
 Preview: Fontsize 10pt
 Preview: PDFoutput 1
-)  !name(sections/03-01-ellip.tex) !offset(-11) 
-./_region_.tex:12: Preview: Snippet 1 started.
+)  !name(sections/03-01-ellip.tex) !offset(-10) 
+./_region_.tex:11: Preview: Snippet 1 started.
 <-><->
       
-l.12 \subsection
+l.11 \subsection
                 {Diseño de un filtro elíptico FFIR}
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
-./_region_.tex:12: Preview: Snippet 1 ended.(448587+135328x16515072).
+./_region_.tex:11: Preview: Snippet 1 ended.(448587+135328x16515072).
 <-><->
       
-l.12 ...ction{Diseño de un filtro elíptico FFIR}
+l.11 ...ction{Diseño de un filtro elíptico FFIR}
                                                   
 Not a real error.
 
@@ -105,145 +148,603 @@ Not a real error.
 
 ]
 
-LaTeX Warning: Reference `sec:02-02-mag-cuad' on page 1 undefined on input line 13.
+LaTeX Warning: Reference `sec:02-02-mag-cuad' on page 1 undefined on input line 14.
 
-./_region_.tex:16: Preview: Snippet 2 started.
+./_region_.tex:19: Preview: Snippet 2 started.
 <-><->
       
-l.16       \item Banda de paso normalizada $
-                                            (0.00,0.10)$ en fracciones de $\...
+l.19       \item Banda de paso normalizada $
+                                            (0.00,0.10)$ en fracciones de
 Not a real error.
 
-./_region_.tex:16: Preview: Snippet 2 ended.(491520+163840x3131171).
+./_region_.tex:19: Preview: Snippet 2 ended.(491520+163840x3131171).
 <-><->
       
-l.16 ...em Banda de paso normalizada $(0.00,0.10)$
-                                                   en fracciones de $\nicefr...
+l.19 ...em Banda de paso normalizada $(0.00,0.10)$
+                                                   en fracciones de
 Not a real error.
 
 [2]
-./_region_.tex:16: Preview: Snippet 3 started.
+./_region_.tex:20: Preview: Snippet 3 started.
 <-><->
       
-l.16 ...rmalizada $(0.00,0.10)$ en fracciones de $
-                                                  \nicefrac{f_{s}}{2}$ con a...
+l.20             $
+                  \nicefrac{f_{s}}{2}$ con al menos $0.08 \: [\unit{dB}]$ de...
 Not a real error.
 
-./_region_.tex:16: Preview: Snippet 3 ended.(491520+163840x987601).
+./_region_.tex:20: Preview: Snippet 3 ended.(491520+163840x987601).
 <-><->
       
-l.16 ...0)$ en fracciones de $\nicefrac{f_{s}}{2}$
-                                                   con al menos $0.08 \: [\u...
+l.20             $\nicefrac{f_{s}}{2}$
+                                       con al menos $0.08 \: [\unit{dB}]$ de...
 Not a real error.
 
 [3]
-./_region_.tex:16: Preview: Snippet 4 started.
+./_region_.tex:20: Preview: Snippet 4 started.
 <-><->
       
-l.16 ...es de $\nicefrac{f_{s}}{2}$ con al menos $
+l.20 ...      $\nicefrac{f_{s}}{2}$ con al menos $
                                                   0.08 \: [\unit{dB}]$ de ri...
 Not a real error.
 
-./_region_.tex:16: Preview: Snippet 4 ended.(491520+163840x2503115).
+./_region_.tex:20: Preview: Snippet 4 ended.(491520+163840x2503115).
 <-><->
       
-l.16 ...s}}{2}$ con al menos $0.08 \: [\unit{dB}]$
-                                                   de ripple máximo pico-a-...
+l.20 ...s}}{2}$ con al menos $0.08 \: [\unit{dB}]$
+                                                   de ripple
 Not a real error.
 
 [4]
-./_region_.tex:16: Preview: Snippet 5 started.
+./_region_.tex:21: Preview: Snippet 5 started.
 <-><->
       
-l.16 ...}]$ de ripple máximo pico-a-pico, donde $
-                                                  f_{s}$ se define como la f...
+l.21             máximo pico-a-pico, donde $
+                                             f_{s}$ se define como la frecue...
 Not a real error.
 
-./_region_.tex:16: Preview: Snippet 5 ended.(455111+127431x600977).
+./_region_.tex:21: Preview: Snippet 5 ended.(455111+127431x600977).
 <-><->
       
-l.16 ... ripple máximo pico-a-pico, donde $f_{s}$
+l.21 ...        máximo pico-a-pico, donde $f_{s}$
                                                    se define como la frecuen...
 Not a real error.
 
 [5]
-./_region_.tex:17: Preview: Snippet 6 started.
+./_region_.tex:23: Preview: Snippet 6 started.
 <-><->
       
-l.17       \item Banda de parada normalzada $
-                                             (0.11,1.00)$ con al menos $50 \...
+l.23       \item Banda de parada normalzada $
+                                             (0.11,1.00)$ con al menos
 Not a real error.
 
-./_region_.tex:17: Preview: Snippet 6 ended.(491520+163840x3131171).
+./_region_.tex:23: Preview: Snippet 6 ended.(491520+163840x3131171).
 <-><->
       
-l.17 ...m Banda de parada normalzada $(0.11,1.00)$
-                                                   con al menos $50 \: [\uni...
+l.23 ...m Banda de parada normalzada $(0.11,1.00)$
+                                                   con al menos
 Not a real error.
 
 [6]
-./_region_.tex:17: Preview: Snippet 7 started.
+./_region_.tex:24: Preview: Snippet 7 started.
 <-><->
       
-l.17 ...da normalzada $(0.11,1.00)$ con al menos $
-                                                  50 \: [\unit{dB}]$ de aten...
+l.24             $
+                  50 \: [\unit{dB}]$ de atenuación.
 Not a real error.
 
-./_region_.tex:17: Preview: Snippet 7 ended.(491520+163840x1993389).
+./_region_.tex:24: Preview: Snippet 7 ended.(491520+163840x1993389).
 <-><->
       
-l.17 ...11,1.00)$ con al menos $50 \: [\unit{dB}]$
-                                                   de atenuación.
+l.24             $50 \: [\unit{dB}]$
+                                     de atenuación.
 Not a real error.
 
 [7]
-./_region_.tex:19: Preview: Snippet 8 started.
+./_region_.tex:26: Preview: Snippet 8 started.
 <-><->
       
-l.19       \item Amplitud máxima de $
+l.26       \item Amplitud máxima de $
                                       \mu = 1.0$.
 Not a real error.
 
-./_region_.tex:19: Preview: Snippet 8 ended.(422343+127431x2106099).
+./_region_.tex:26: Preview: Snippet 8 ended.(422343+127431x2106099).
 <-><->
       
-l.19       \item Amplitud máxima de $\mu = 1.0$
+l.26       \item Amplitud máxima de $\mu = 1.0$
                                                 .
 Not a real error.
 
 [8]
-./_region_.tex:22: Preview: Snippet 9 started.
+./_region_.tex:30: Preview: Snippet 9 started.
 <-><->
       
-l.22 ...a de transición angosta en el intervalo $
-                                                  (0.10,0.11)$, se seleccion...
+l.30 ...a de transición angosta en el intervalo $
+                                                  (0.10,0.11)$, se
 Not a real error.
 
-./_region_.tex:22: Preview: Snippet 9 ended.(491520+163840x3131171).
+./_region_.tex:30: Preview: Snippet 9 ended.(491520+163840x3131171).
 <-><->
       
-l.22 ...ión angosta en el intervalo $(0.10,0.11)$
-                                                  , se selecciona un filtro ...
+l.30 ...ión angosta en el intervalo $(0.10,0.11)$
+                                                  , se
 Not a real error.
 
-[9]  !name(../main.tex) !offset(-11) 
+[9] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 38.
+ (../code/ellip-coeffs.m)
+./_region_.tex:41: Preview: Snippet 10 started.
+<-><->
+      
+l.41       \item $
+                  a_{0} = 1.0000$
+Not a real error.
+
+./_region_.tex:41: Preview: Snippet 10 ended.(422343+127431x3334675).
+<-><->
+      
+l.41       \item $a_{0} = 1.0000$
+                                 
+Not a real error.
+
+[10]
+./_region_.tex:42: Preview: Snippet 11 started.
+<-><->
+      
+l.42       \item $
+                  a_{1} = -5.2007$
+Not a real error.
+
+./_region_.tex:42: Preview: Snippet 11 ended.(422343+127431x3844401).
+<-><->
+      
+l.42       \item $a_{1} = -5.2007$
+                                  
+Not a real error.
+
+[11]
+./_region_.tex:43: Preview: Snippet 12 started.
+<-><->
+      
+l.43       \item $
+                  a_{2} = 11.4639$
+Not a real error.
+
+./_region_.tex:43: Preview: Snippet 12 ended.(422343+127431x3662356).
+<-><->
+      
+l.43       \item $a_{2} = 11.4639$
+                                  
+Not a real error.
+
+[12]
+./_region_.tex:44: Preview: Snippet 13 started.
+<-><->
+      
+l.44       \item $
+                  a_{3} = -13.6841$
+Not a real error.
+
+./_region_.tex:44: Preview: Snippet 13 ended.(422343+127431x4172082).
+<-><->
+      
+l.44       \item $a_{3} = -13.6841$
+                                   
+Not a real error.
+
+[13]
+./_region_.tex:45: Preview: Snippet 14 started.
+<-><->
+      
+l.45       \item $
+                  a_{4} = 9.3190$
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 14 ended.(422343+127431x3334675).
+<-><->
+      
+l.45       \item $a_{4} = 9.3190$
+                                 
+Not a real error.
+
+[14]
+./_region_.tex:46: Preview: Snippet 15 started.
+<-><->
+      
+l.46       \item $
+                  a_{5} = -3.4305$
+Not a real error.
+
+./_region_.tex:46: Preview: Snippet 15 ended.(422343+127431x3844401).
+<-><->
+      
+l.46       \item $a_{5} = -3.4305$
+                                  
+Not a real error.
+
+[15]
+./_region_.tex:47: Preview: Snippet 16 started.
+<-><->
+      
+l.47       \item $
+                  a_{6} = 0.5332$
+Not a real error.
+
+./_region_.tex:47: Preview: Snippet 16 ended.(422343+127431x3334675).
+<-><->
+      
+l.47       \item $a_{6} = 0.5332$
+                                 
+Not a real error.
+
+[16]
+./_region_.tex:51: Preview: Snippet 17 started.
+<-><->
+      
+l.51       \item $
+                  b_{0} = 0.051513$
+Not a real error.
+
+./_region_.tex:51: Preview: Snippet 17 ended.(455111+127431x3924879).
+<-><->
+      
+l.51       \item $b_{0} = 0.051513$
+                                   
+Not a real error.
+
+[17]
+./_region_.tex:52: Preview: Snippet 18 started.
+<-><->
+      
+l.52       \item $
+                  b_{1} = -0.257151$
+Not a real error.
+
+./_region_.tex:52: Preview: Snippet 18 ended.(455111+127431x4434605).
+<-><->
+      
+l.52       \item $b_{1} = -0.257151$
+                                    
+Not a real error.
+
+[18]
+./_region_.tex:53: Preview: Snippet 19 started.
+<-><->
+      
+l.53       \item $
+                  b_{2} = 0.576634$
+Not a real error.
+
+./_region_.tex:53: Preview: Snippet 19 ended.(455111+127431x3924879).
+<-><->
+      
+l.53       \item $b_{2} = 0.576634$
+                                   
+Not a real error.
+
+[19]
+./_region_.tex:54: Preview: Snippet 20 started.
+<-><->
+      
+l.54       \item $
+                  b_{3} = -0.741252$
+Not a real error.
+
+./_region_.tex:54: Preview: Snippet 20 ended.(455111+127431x4434605).
+<-><->
+      
+l.54       \item $b_{3} = -0.741252$
+                                    
+Not a real error.
+
+[20]
+./_region_.tex:55: Preview: Snippet 21 started.
+<-><->
+      
+l.55       \item $
+                  b_{4} = 0.576634$
+Not a real error.
+
+./_region_.tex:55: Preview: Snippet 21 ended.(455111+127431x3924879).
+<-><->
+      
+l.55       \item $b_{4} = 0.576634$
+                                   
+Not a real error.
+
+[21]
+./_region_.tex:56: Preview: Snippet 22 started.
+<-><->
+      
+l.56       \item $
+                  b_{5} = -0.257151$
+Not a real error.
+
+./_region_.tex:56: Preview: Snippet 22 ended.(455111+127431x4434605).
+<-><->
+      
+l.56       \item $b_{5} = -0.257151$
+                                    
+Not a real error.
+
+[22]
+./_region_.tex:57: Preview: Snippet 23 started.
+<-><->
+      
+l.57       \item $
+                  b_{6} = 0.051513$
+Not a real error.
+
+./_region_.tex:57: Preview: Snippet 23 ended.(455111+127431x3924879).
+<-><->
+      
+l.57       \item $b_{6} = 0.051513$
+                                   
+Not a real error.
+
+[23]
+
+LaTeX Warning: Reference `eq:73' on page 1 undefined on input line 61.
+
+./_region_.tex:61: Preview: Snippet 24 started.
+<-><->
+      
+l.61 ... \ref{eq:73} para calcular los vaores de $
+                                                  N_{k}$, y se redondedea
+Not a real error.
+
+./_region_.tex:61: Preview: Snippet 24 ended.(447828+98303x849011).
+<-><->
+      
+l.61 ...eq:73} para calcular los vaores de $N_{k}$
+                                                  , y se redondedea
+Not a real error.
+
+[24]
+./_region_.tex:63: Preview: Snippet 25 started.
+<-><->
+      
+l.63      $
+           N_{k}$ para cada polo. Como los coeficientes se encuentran en forma
+Not a real error.
+
+./_region_.tex:63: Preview: Snippet 25 ended.(447828+98303x849011).
+<-><->
+      
+l.63      $N_{k}$
+                  para cada polo. Como los coeficientes se encuentran en forma
+Not a real error.
+
+[25]
+./_region_.tex:64: Preview: Snippet 26 started.
+<-><->
+      
+l.64 ...omplejos conjugados, se puede reescribir $
+                                                  H(z)$ en tres terminos
+Not a real error.
+
+./_region_.tex:64: Preview: Snippet 26 ended.(491520+163840x1441338).
+<-><->
+      
+l.64 ...jos conjugados, se puede reescribir $H(z)$
+                                                   en tres terminos
+Not a real error.
+
+[26]
+./_region_.tex:67: Preview: Snippet 27 started.
+<-><->
+      
+l.67      \begin{equation}
+                          
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 27 ended.(5234826+0x16515072).
+<-><->
+      
+l.73      \end{equation}
+                        
+Not a real error.
+
+[27]
+./_region_.tex:78: Preview: Snippet 28 started.
+<-><->
+      
+l.78      $
+           H(z) = h_{0} + H_{1}(z) + H_{2}(z) + H_{3}(z)$, se desarrollará la
+Not a real error.
+
+./_region_.tex:78: Preview: Snippet 28 ended.(491520+163840x10435993).
+<-><->
+      
+l.78 ... = h_{0} + H_{1}(z) + H_{2}(z) + H_{3}(z)$
+                                                  , se desarrollará la
+Not a real error.
+
+[28]
+./_region_.tex:79: Preview: Snippet 29 started.
+<-><->
+      
+l.79      reformulación de $
+                             H_{1}(z)$ teniendo en cuenta que $H_{2,3}(z)$ s...
+Not a real error.
+
+./_region_.tex:79: Preview: Snippet 29 ended.(491520+163840x1682095).
+<-><->
+      
+l.79      reformulación de $H_{1}(z)$
+                                       teniendo en cuenta que $H_{2,3}(z)$ s...
+Not a real error.
+
+[29]
+./_region_.tex:79: Preview: Snippet 30 started.
+<-><->
+      
+l.79 ...ón de $H_{1}(z)$ teniendo en cuenta que $
+                                                  H_{2,3}(z)$ será
+Not a real error.
+
+./_region_.tex:79: Preview: Snippet 30 ended.(491520+187504x2098978).
+<-><->
+      
+l.79 ...1}(z)$ teniendo en cuenta que $H_{2,3}(z)$
+                                                   será
+Not a real error.
+
+[30]
+./_region_.tex:82: Preview: Snippet 31 started.
+<-><->
+      
+l.82      \begin{equation}
+                          
+Not a real error.
+
+./_region_.tex:89: Preview: Snippet 31 ended.(6888596+0x16515072).
+<-><->
+      
+l.89      \end{equation}
+                        
+Not a real error.
+
+[31]
+./_region_.tex:91: Preview: Snippet 32 started.
+<-><->
+      
+l.91      Entonces, finalmente $
+                                H(z)$ se puede escribir como
+Not a real error.
+
+./_region_.tex:91: Preview: Snippet 32 ended.(491520+163840x1441338).
+<-><->
+      
+l.91      Entonces, finalmente $H(z)$
+                                      se puede escribir como
+Not a real error.
+
+[32]
+./_region_.tex:93: Preview: Snippet 33 started.
+<-><->
+      
+l.93      \begin{equation}
+                          
+Not a real error.
+
+./_region_.tex:99: Preview: Snippet 33 ended.(3267640+0x16515072).
+<-><->
+      
+l.99      \end{equation}
+                        
+Not a real error.
+
+[33]
+
+LaTeX Warning: Reference `eq:25' on page 1 undefined on input line 102.
+
+./_region_.tex:102: Preview: Snippet 34 started.
+<-><->
+      
+l.102      Ec. \ref{eq:25} para formar $
+                                        H_{FIR}^{+}(z)$, utilizando los $N_{...
+Not a real error.
+
+./_region_.tex:102: Preview: Snippet 34 ended.(564338+192599x2488851).
+<-><->
+      
+l.102 ... \ref{eq:25} para formar $H_{FIR}^{+}(z)$
+                                                  , utilizando los $N_{1,3,5...
+Not a real error.
+
+[34]
+./_region_.tex:102: Preview: Snippet 35 started.
+<-><->
+      
+l.102 ...formar $H_{FIR}^{+}(z)$, utilizando los $
+                                                  N_{1,3,5}$ de
+Not a real error.
+
+./_region_.tex:102: Preview: Snippet 35 ended.(447828+187504x1654332).
+<-><->
+      
+l.102 ...{FIR}^{+}(z)$, utilizando los $N_{1,3,5}$
+                                                   de
+Not a real error.
+
+[35]
+./_region_.tex:105: Preview: Snippet 36 started.
+<-><->
+      
+l.105      TABLA XXXX. Se elige $
+                                 N = 497$ como el punto de corte para trunca...
+Not a real error.
+
+./_region_.tex:105: Preview: Snippet 36 ended.(447828+0x2454863).
+<-><->
+      
+l.105      TABLA XXXX. Se elige $N = 497$
+                                          como el punto de corte para trunca...
+Not a real error.
+
+[36]
+./_region_.tex:106: Preview: Snippet 37 started.
+<-><->
+      
+l.106      filtro, ya que dicho $
+                                 N_{k}$ es el más grande. Asi, se implement...
+Not a real error.
+
+./_region_.tex:106: Preview: Snippet 37 ended.(447828+98303x849011).
+<-><->
+      
+l.106      filtro, ya que dicho $N_{k}$
+                                        es el más grande. Asi, se implement...
+Not a real error.
+
+[37]
+./_region_.tex:109: Preview: Snippet 38 started.
+<-><->
+      
+l.109      \begin{equation}
+                           
+Not a real error.
+
+./_region_.tex:116: Preview: Snippet 38 ended.(5572392+0x33816576).
+<-><->
+      
+l.116      \end{equation}
+                         
+Not a real error.
+
+[38]
+CUTED [- LAST -]
+Extra skip:0.0pt
+Left:390.0pt/0.0pt
+Right:388.0pt/2.16492pt
+Split: 389.0pt
+Output:389.0pt
+Pageshrink: 0.0pt
+Pagestretch: 0.0pt
+@colht:696.0pt
+CUTED [output]: 389.0pt
+CUTED [leftcolumn badness]: 0
+CUTED [rightcolumn badness]: 1
+  !name(../main.tex) !offset(-105) 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2267 strings out of 460010
- 57660 string characters out of 5515874
- 760084 words of memory out of 5000000
- 38481 multiletter control sequences out of 15000+600000
- 493986 words of font info for 79 fonts, out of 8000000 for 9000
+ 3548 strings out of 458788
+ 72452 string characters out of 5497151
+ 1021967 words of memory out of 5000000
+ 40912 multiletter control sequences out of 15000+600000
+ 498380 words of font info for 93 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 50i,8n,56p,339b,867s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on _region_.pdf (9 pages, 57276 bytes).
+ 50i,11n,56p,249b,1820s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on _region_.pdf (38 pages, 105742 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
