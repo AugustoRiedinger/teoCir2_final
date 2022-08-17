@@ -12,7 +12,7 @@ N = 300;
 
 % Polinomio de la funcion transferencia HFIR+
 num_HFIR2 = [-c d zeros(1,N-1) -e];
-den_HFIR2 = [1 -u v zeros(1,N-1)];
+den_HFIR2 = [1 -u v zeros(1,N)];
 
 % Grafico de la respuesta al impulso
 impz(num_HFIR2,den_HFIR2)
